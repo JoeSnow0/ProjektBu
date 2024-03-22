@@ -24,22 +24,31 @@ public class PlayerController : MonoBehaviour
     [Range(0f, 3f)]
     [Tooltip("In Meters, adjusts the height of the player")]
     [SerializeField] float height;
+    
     [Range(0f, 3f)]
     [Tooltip("In Meters, adjusts the height of the player when crouched")]
     [SerializeField] float crouchHeight;
+
     [Range(0f, 3f)]
+    [Tooltip("Crouch Speed, how fast the player will be walking while crouched down")]
+    [SerializeField] float crouchSpeed;
+
+    [Range(0f, 3f)] 
     [Tooltip("In Meters, the width of the player (is applied to the width of the collider)")]
     [SerializeField] float width;
-
+    
     [Range(0f, 1000f)]
     [Tooltip("Regular walking speed")]
     [SerializeField] float movementSpeed;
+    
     [Range(0f, 1000f)]
     [Tooltip("sprint speed")]
     [SerializeField] float sprintSpeed;
+    
     [Range(0f, 100f)]
     [Tooltip("Speed of your turning, also affected by mouse sensitivity")]
     [SerializeField] float turnSpeed;
+    
     [Range(-180f, 180f)]
     [Tooltip("Keep within reasonable head tilting range for a human")]
     [SerializeField] float headTiltMax = 175f;
@@ -60,14 +69,23 @@ public class PlayerController : MonoBehaviour
     private void Start()
     {
         InitializePlayer();
+
     }
     void InitializePlayer()
     {
         //Anything that needs to be set at start goes here, call it again if player needs to be reinitialized
         mCam.fieldOfView = fieldOfView;
         Cursor.lockState = CursorLockMode.Locked;
-        mBodyCollider.height = height;
+        //mBodyCollider.height = height;
+        SetPlayerHeight(height);
         mBodyCollider.radius = width;
+        //Adjust the position of the head to be at the top of the collider
+            //mHead.transform.localPosition = new Vector3(0f, mBodyCollider.height * 0.5f - mHead.transform.localScale.y * 0.5f, 0f);
+    }
+
+    void SetPlayerHeight(float newHeight)
+    {
+        mBodyCollider.height = newHeight;
         //Adjust the position of the head to be at the top of the collider
         mHead.transform.localPosition = new Vector3(0f, mBodyCollider.height * 0.5f - mHead.transform.localScale.y * 0.5f, 0f);
     }
@@ -102,13 +120,35 @@ public class PlayerController : MonoBehaviour
         yRotation += addRotation.x;
         transform.localRotation = Quaternion.Euler(0f, yRotation, 0f);
     }
+
+    void crouch()
+    {
+        if (Input.GetKeyDown(KeyCode.LeftControl)) 
+        {
+            //transform.localScale = new Vector3(transform.localScale.x, crouchHeight);
+
+            //transform.position = new Vector3(transform.position.x, transform.position.y - 0.5f, transform.position.z);
+
+            SetPlayerHeight(crouchHeight);
+        }
+
+        if (Input.GetKeyUp(KeyCode.LeftControl))
+        {
+            //transform.localScale = new Vector3(transform.localScale.x, crouchHeight);
+            //transform.position = new Vector3(transform.position.x, transform.position.y + 0.5f);
+            SetPlayerHeight(height);
+        }
+    }
     private void Update()
     {
         Look();
+        crouch();
     }
     private void FixedUpdate()
     {
         //Movement is processed in fixed updates so it lines up with the physics checks
-        Movement(); 
+        Movement();
+
+        
     }
 }
