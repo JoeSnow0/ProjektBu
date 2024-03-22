@@ -62,6 +62,7 @@ public class PlayerController : MonoBehaviour
     //Input
     Vector2 mMoveInput; 
     Vector2 mLookInput;
+    float mCrouchInput;
     //Used for turning
     float xRotation = 0f;
     float yRotation = 0f;
@@ -101,6 +102,10 @@ public class PlayerController : MonoBehaviour
         mLookInput = context.action.ReadValue<Vector2>();
         Debug.Log("Look Input: " +  mLookInput);
     }
+    public void CrouchButton(InputAction.CallbackContext context)
+    {
+        mCrouchInput = context.action.ReadValue<float>();
+    }
     void Movement()
     {
         //Move forward in the direction the player body is facing
@@ -123,7 +128,7 @@ public class PlayerController : MonoBehaviour
 
     void crouch()
     {
-        if (Input.GetKeyDown(KeyCode.LeftControl)) 
+        if (mCrouchInput > 0f) 
         {
             //transform.localScale = new Vector3(transform.localScale.x, crouchHeight);
 
@@ -132,8 +137,9 @@ public class PlayerController : MonoBehaviour
             SetPlayerHeight(crouchHeight);
         }
 
-        if (Input.GetKeyUp(KeyCode.LeftControl))
+        if (mCrouchInput == 0f)
         {
+            
             //transform.localScale = new Vector3(transform.localScale.x, crouchHeight);
             //transform.position = new Vector3(transform.position.x, transform.position.y + 0.5f);
             SetPlayerHeight(height);
