@@ -94,13 +94,13 @@ public class PlayerController : MonoBehaviour
     {
         //Get the input from the assigned Input from the Player Input
         mMoveInput = context.action.ReadValue<Vector2>();
-        Debug.Log("Move Input: " + mMoveInput);
+        //Debug.Log("Move Input: " + mMoveInput);
     }
     public void LookInput(InputAction.CallbackContext context)
     { 
         //Get the input from the assigned Input from the Player Input
         mLookInput = context.action.ReadValue<Vector2>();
-        Debug.Log("Look Input: " +  mLookInput);
+        //Debug.Log("Look Input: " +  mLookInput);
     }
     public void CrouchButton(InputAction.CallbackContext context)
     {

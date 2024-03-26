@@ -5,5 +5,7 @@ using UnityEngine;
 public abstract class Interactable : MonoBehaviour
 {
     //All Interactables have a name
-    string mName;
+    public string mItemName;
+    //And an activation function
+    public abstract void InteractionTriggered();
 }
