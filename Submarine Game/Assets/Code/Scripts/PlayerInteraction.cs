@@ -31,6 +31,7 @@ public class PlayerInteraction : MonoBehaviour
         mInteractInput = context.action.WasPressedThisFrame();
         //Debug.Log("Look Input: " + mInteractInput);
     }
+    //Checks if what you're looking at is an interactable, shoots a raycast from the camera in the direction its looking
     RaycastHit CheckInteractable()
     {
         origin = mCam.transform.position;
@@ -40,6 +41,7 @@ public class PlayerInteraction : MonoBehaviour
         return hit;
         
     }
+    //Attempts to trigger a function on the interactable
     void AttemptInteraction()
     {
         if(mInteractInput)
@@ -51,6 +53,7 @@ public class PlayerInteraction : MonoBehaviour
             }
         }
     }
+    //Updates the HUD: if the player is looking at an interactable, add its name to the screen, clear when looking away
     void UpdateHUD()
     {
         RaycastHit hit = CheckInteractable();
@@ -67,6 +70,7 @@ public class PlayerInteraction : MonoBehaviour
     }
     private void LateUpdate()
     {
+        //reset the interact input, this prevents the player from constantly triggering the door animation(or other interactable animation)
         mInteractInput = false;
     }
 }
