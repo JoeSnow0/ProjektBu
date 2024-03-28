@@ -13,6 +13,7 @@ public class PlayerInteraction : MonoBehaviour
     //A script that fires a raycast in the direction the player is facing from the centre of the camera view.
     //If it collides with anything interactable, get its name and display it on the UI
     [SerializeField] Camera mCam;
+    public List<Key> myKeys =  new List<Key>();
     [SerializeField] float maxDistance;
     [SerializeField] LayerMask interactableMask;
     [SerializeField] TextMeshProUGUI interactableHUDText;
@@ -25,6 +26,7 @@ public class PlayerInteraction : MonoBehaviour
     {
         interactableHUDText.text = "";
         ToggleNotes(false);
+        myKeys.Clear();
     }
     public void InteractInput(InputAction.CallbackContext context)
     {
@@ -51,7 +53,6 @@ public class PlayerInteraction : MonoBehaviour
             RaycastHit hit = CheckInteractable();
             if (hit.collider != null)
             {
-                hit.transform.GetComponent<Interactable>().InteractionTriggered();
                 //Check for notes
                 if(hit.transform.GetComponent<InteractableNotes>() != null)
                 {
@@ -62,6 +63,14 @@ public class PlayerInteraction : MonoBehaviour
                 {
                     ToggleNotes(false);
                 }
+                //check for pickups
+                if (hit.transform.GetComponent<PickUpKey>() != null)
+                {
+                    //add key to player
+                    myKeys.Add(hit.transform.GetComponent<PickUpKey>().mKey);
+
+                }
+                hit.transform.GetComponent<Interactable>().InteractionTriggered();
             }
         }
     }

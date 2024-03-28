@@ -2,12 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class InteractableNotes : Interactable
+public class PickUpKey : Pickup
 {
-    public StringReference myText;
+    public Key mKey;
     public override void InteractionTriggered()
     {
-
+        Destroy(gameObject);
     }
-    
 }

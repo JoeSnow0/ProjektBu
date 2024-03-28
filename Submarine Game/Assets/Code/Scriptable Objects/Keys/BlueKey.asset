@@ -9,7 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2853ffee04193004795b9f3d21200205, type: 3}
-  m_Name: Note#1
+  m_Script: {fileID: 11500000, guid: af5615c02c18f884db0fbadb1bfe0fcd, type: 3}
+  m_Name: BlueKey
   m_EditorClassIdentifier: 
-  text: This is the first note!
+  KeyName: Blue
+  aquiredOrRequired: 0
