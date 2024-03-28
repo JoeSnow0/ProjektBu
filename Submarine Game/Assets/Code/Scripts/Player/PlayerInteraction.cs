@@ -16,6 +16,7 @@ public class PlayerInteraction : MonoBehaviour
     [SerializeField] float maxDistance;
     [SerializeField] LayerMask interactableMask;
     [SerializeField] TextMeshProUGUI interactableHUDText;
+    [SerializeField] TextMeshProUGUI NotesText;
     Vector3 origin;
     Vector3 direction;
     bool mInteractInput;
@@ -23,6 +24,7 @@ public class PlayerInteraction : MonoBehaviour
     private void Start()
     {
         interactableHUDText.text = "";
+        ToggleNotes(false);
     }
     public void InteractInput(InputAction.CallbackContext context)
     {
@@ -50,17 +52,36 @@ public class PlayerInteraction : MonoBehaviour
             if (hit.collider != null)
             {
                 hit.transform.GetComponent<Interactable>().InteractionTriggered();
+                //Check for notes
+                if(hit.transform.GetComponent<InteractableNotes>() != null)
+                {
+                    NotesText.text = hit.transform.gameObject.GetComponent<InteractableNotes>().myText.text;
+                    ToggleNotes(true);
+                }
+                else
+                {
+                    ToggleNotes(false);
+                }
             }
         }
+    }
+    //Toggle Display of notes UI
+    void ToggleNotes(bool onOff)
+    {
+        NotesText.gameObject.SetActive(onOff);
     }
     //Updates the HUD: if the player is looking at an interactable, add its name to the screen, clear when looking away
     void UpdateHUD()
     {
         RaycastHit hit = CheckInteractable();
-        interactableHUDText.text = "";
         if(hit.collider != null)
         {
             interactableHUDText.text = hit.transform.gameObject.GetComponent<Interactable>().mItemName;
+        }
+        else
+        {
+            interactableHUDText.text = "";
+            NotesText.text = "";
         }
     }
     private void Update()
