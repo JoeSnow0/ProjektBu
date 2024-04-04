@@ -46,6 +46,7 @@ public class InteractableObject : Interactable
     }
     private void TriggerAnimation()
     {
+        //mAnim.get
         //Flips the bool which should trigger the animation to play
         mAnim.SetBool("Opened", !mAnim.GetBool("Opened"));
         mAnim.speed = animationSpeed;
