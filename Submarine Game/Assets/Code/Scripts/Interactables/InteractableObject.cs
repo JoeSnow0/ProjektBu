@@ -7,7 +7,7 @@ using UnityEngine;
 public class InteractableObject : Interactable
 {
     [SerializeField] float animationSpeed = 1f;
-    [SerializeField] Animation mAnim;
+    [SerializeField] Animator mAnim;
     bool opened = false;
     [SerializeField] Key requiredKey;
     public override void InteractionTriggered()
@@ -38,14 +38,16 @@ public class InteractableObject : Interactable
                 Debug.Log("You are missing a key");
             }
         }
+        if(requiredKey == null)
+        {
+            TriggerAnimation();
+        }
     }
     private void TriggerAnimation()
     {
-        if (opened == false)
-        {
-            mAnim.Play();
-            opened = true;
-        }
+        //Flips the bool which should trigger the animation to play
+        mAnim.SetBool("Opened", !mAnim.GetBool("Opened"));
+        mAnim.speed = animationSpeed;
     }
     
 }

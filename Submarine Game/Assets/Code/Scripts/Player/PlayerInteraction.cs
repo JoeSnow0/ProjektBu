@@ -85,7 +85,10 @@ public class PlayerInteraction : MonoBehaviour
         RaycastHit hit = CheckInteractable();
         if(hit.collider != null)
         {
-            interactableHUDText.text = hit.transform.gameObject.GetComponent<Interactable>().mItemName;
+            if(hit.transform.gameObject.GetComponent<Interactable>() != null)
+            {
+                interactableHUDText.text = hit.transform.gameObject.GetComponent<Interactable>().mItemName;
+            }
         }
         else
         {
