@@ -10,6 +10,7 @@ public class InteractableObject : Interactable
     [SerializeField] Animator mAnim;
     bool opened = false;
     [SerializeField] Key requiredKey;
+    
     public override void InteractionTriggered()
     {
         KeyCheck();
