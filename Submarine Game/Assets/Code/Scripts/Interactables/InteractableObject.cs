@@ -10,8 +10,30 @@ public class InteractableObject : Interactable
     [SerializeField] Animator mAnim;
     bool opened = false;
     [SerializeField] Key requiredKey;
-    
-    public override void InteractionTriggered()
+    bool isPlaying = false;
+    AnimatorStateInfo animStateInfo;
+    public float NormalizedTime;
+
+    private void Update()
+    {
+        checkAnimationIsPlaying();
+    }
+    //Checks if the currently active animation has finished its animation
+    private void checkAnimationIsPlaying()
+    {
+        animStateInfo = mAnim.GetCurrentAnimatorStateInfo(0);
+        NormalizedTime = animStateInfo.normalizedTime;
+
+        if (NormalizedTime > 1.0f)
+        {
+            isPlaying = true;
+        }
+        else
+        {
+            isPlaying = false;
+        }
+    }
+public override void InteractionTriggered()
     {
         KeyCheck();
     }
@@ -46,10 +68,13 @@ public class InteractableObject : Interactable
     }
     private void TriggerAnimation()
     {
-        //mAnim.get
-        //Flips the bool which should trigger the animation to play
-        mAnim.SetBool("Opened", !mAnim.GetBool("Opened"));
-        mAnim.speed = animationSpeed;
+        if (isPlaying!)
+        {
+            //Flips the bool which should trigger the animation to play
+            mAnim.SetBool("Opened", !mAnim.GetBool("Opened"));
+            isPlaying = true;
+            mAnim.speed = animationSpeed;
+        }
     }
     
 }
