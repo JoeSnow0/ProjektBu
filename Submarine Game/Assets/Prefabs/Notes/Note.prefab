@@ -118,5 +118,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d86e44b616a6f944b2486ca1c60ecd1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mItemName: Notes #1
-  myText: {fileID: 11400000, guid: 6150e042ccc0c4f46ba00605076250b9, type: 2}
+  mItemName: Name
+  myText: {fileID: 0}
