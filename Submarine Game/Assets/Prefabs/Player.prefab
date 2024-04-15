@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 1291106951511548512}
   - component: {fileID: 8836652145531448497}
   - component: {fileID: 883680255131821128}
-  m_Layer: 5
+  m_Layer: 7
   m_Name: Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -114,7 +114,7 @@ GameObject:
   - component: {fileID: 6474486124908220842}
   - component: {fileID: 1307730190841164079}
   - component: {fileID: 1845765007037398822}
-  m_Layer: 5
+  m_Layer: 7
   m_Name: NoteHUD
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -190,7 +190,7 @@ GameObject:
   - component: {fileID: 9087445655341756679}
   - component: {fileID: 7622710616255137086}
   - component: {fileID: 4452476199337744116}
-  m_Layer: 5
+  m_Layer: 7
   m_Name: Text (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -326,7 +326,7 @@ GameObject:
   - component: {fileID: 7443074598802664913}
   - component: {fileID: 4113177886144252922}
   - component: {fileID: 7479697190151784418}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Head
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -415,7 +415,7 @@ GameObject:
   - component: {fileID: 7546561725946883719}
   - component: {fileID: 5468234788373366633}
   - component: {fileID: 2034881857164872071}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -465,7 +465,7 @@ MonoBehaviour:
   turnSpeed: 15
   headTiltMax: 80
   headTiltMin: -80
-  fieldOfView: 85
+  fieldOfView: 90
 --- !u!114 &855242576165630757
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -735,7 +735,7 @@ GameObject:
   - component: {fileID: 7077045301410747870}
   - component: {fileID: 6400163375086568614}
   - component: {fileID: 5465293060362625557}
-  m_Layer: 5
+  m_Layer: 7
   m_Name: Hud Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -869,7 +869,7 @@ GameObject:
   - component: {fileID: 1823280255415714406}
   - component: {fileID: 4759480001002736327}
   - component: {fileID: 7124052324999566167}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Main Camera
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
