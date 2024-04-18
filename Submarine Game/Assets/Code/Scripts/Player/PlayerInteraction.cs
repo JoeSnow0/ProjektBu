@@ -16,6 +16,8 @@ public class PlayerInteraction : MonoBehaviour
     public List<Key> myKeys =  new List<Key>();
     [SerializeField] float maxDistance;
     [SerializeField] LayerMask interactableMask;
+    [SerializeField] Image NotesPanel;
+    [SerializeField] Image InteractablePanel;
     [SerializeField] TextMeshProUGUI interactableHUDText;
     [SerializeField] TextMeshProUGUI NotesText;
     Vector3 origin;
@@ -24,8 +26,10 @@ public class PlayerInteraction : MonoBehaviour
 
     private void Start()
     {
+        NotesPanel.gameObject.SetActive(false);
+        InteractablePanel.gameObject.SetActive(false);
         interactableHUDText.text = "";
-        ToggleNotes(false);
+        NotesText.text = "";
         myKeys.Clear();
     }
     public void InteractInput(InputAction.CallbackContext context)
@@ -57,11 +61,11 @@ public class PlayerInteraction : MonoBehaviour
                 if(hit.transform.GetComponent<InteractableNotes>() != null)
                 {
                     NotesText.text = hit.transform.gameObject.GetComponent<InteractableNotes>().myText.text;
-                    ToggleNotes(true);
+                    NotesPanel.gameObject.SetActive(true);
                 }
                 else
                 {
-                    ToggleNotes(false);
+                    NotesPanel.gameObject.SetActive(false);
                 }
                 //check for pickups
                 if (hit.transform.GetComponent<PickUpKey>() != null)
@@ -74,11 +78,6 @@ public class PlayerInteraction : MonoBehaviour
             }
         }
     }
-    //Toggle Display of notes UI
-    void ToggleNotes(bool onOff)
-    {
-        NotesText.gameObject.SetActive(onOff);
-    }
     //Updates the HUD: if the player is looking at an interactable, add its name to the screen, clear when looking away
     void UpdateHUD()
     {
@@ -88,11 +87,14 @@ public class PlayerInteraction : MonoBehaviour
             if(hit.transform.gameObject.GetComponent<Interactable>() != null)
             {
                 interactableHUDText.text = hit.transform.gameObject.GetComponent<Interactable>().mItemName;
+                InteractablePanel.gameObject.SetActive(true);
             }
         }
         else
         {
+            InteractablePanel.gameObject.SetActive(false);
             interactableHUDText.text = "";
+            NotesPanel.gameObject.SetActive(false);
             NotesText.text = "";
         }
     }
