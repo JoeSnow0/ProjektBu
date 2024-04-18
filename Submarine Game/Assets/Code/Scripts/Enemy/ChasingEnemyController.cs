@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 [RequireComponent(typeof(Chase))]
@@ -7,8 +8,11 @@ public class ChasingEnemyController : EnemyController
 {
     private void Start()
     {
-        //mStates = FindObjectsByType<EnemyStates>();
+        //mStates[0] is the default state
+        mStates = GetComponents<EnemyStates>();
+        mCurrentState = EnemyController.EnemyState.Chase;
     }
+    
     private void Update()
     {
         if (playerChecker.isInTrigger)
@@ -33,7 +37,6 @@ public class ChasingEnemyController : EnemyController
                     IsTargetSeen = true;
                 }
             }
-
         }
     }
 }

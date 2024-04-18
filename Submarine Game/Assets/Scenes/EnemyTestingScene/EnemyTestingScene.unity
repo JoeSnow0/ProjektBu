@@ -862,11 +862,11 @@ PrefabInstance:
     - target: {fileID: 6310657724988750383, guid: c7281f6149ee4114bb9d3d37ab4308a0, type: 3}
       propertyPath: points.Array.data[0]
       value: 
-      objectReference: {fileID: 1140264818}
+      objectReference: {fileID: 697536885}
     - target: {fileID: 6310657724988750383, guid: c7281f6149ee4114bb9d3d37ab4308a0, type: 3}
       propertyPath: points.Array.data[1]
       value: 
-      objectReference: {fileID: 697536885}
+      objectReference: {fileID: 1140264818}
     - target: {fileID: 7278007186202532516, guid: c7281f6149ee4114bb9d3d37ab4308a0, type: 3}
       propertyPath: m_Color.b
       value: 0.6698113
@@ -924,7 +924,8 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 4735070323193048779, guid: c7281f6149ee4114bb9d3d37ab4308a0, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c7281f6149ee4114bb9d3d37ab4308a0, type: 3}
