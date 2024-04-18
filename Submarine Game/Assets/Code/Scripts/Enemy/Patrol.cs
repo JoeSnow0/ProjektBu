@@ -1,29 +1,25 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting.Antlr3.Runtime;
 using UnityEngine;
 using UnityEngine.AI;
+using static EnemyController;
 
-public class Patrol : MonoBehaviour
+public class Patrol : EnemyStates
 {
     [SerializeField] EnemyController enemyController;
     public Transform[] points;
     private int destPoint = 0;
-    private NavMeshAgent agent;
     float minDistanceBeforeMovingOn = 0.2f;
 
 
     void Start()
     {
         agent = GetComponent<NavMeshAgent>();
-        if (enemyController.enemyState == EnemyController.EnemyState.Patrol)
-        {
-            // Disabling auto-braking allows for continuous movement
-            // between points (ie, the agent doesn't slow down as it
-            // approaches a destination point).
-            agent.autoBraking = false;
 
-            GotoNextPoint();
-        }
+        mState = EnemyController.EnemyState.Patrol;
+        GotoNextPoint();
+        
     }
 
 
@@ -46,16 +42,17 @@ public class Patrol : MonoBehaviour
     {
         // Choose the next destination point when the agent gets
         // close to the current one.
-        if (enemyController.enemyState == EnemyController.EnemyState.Patrol && !agent.pathPending && agent.remainingDistance < minDistanceBeforeMovingOn)
+        if (enemyController.mCurrentState == EnemyController.EnemyState.Patrol && !agent.pathPending && agent.remainingDistance < minDistanceBeforeMovingOn)
             GotoNextPoint();
     }
-    public void ResumePatrol()
+    public override void ActivateState()
     {
         agent.isStopped = false;
+        enemyController.mCurrentState = mState;
     }
-    public void PausePatrol()
+    public override void DeactivateState()
     {
-        agent.isStopped = true;
+        //agent.isStopped = true;
     }
 
 }

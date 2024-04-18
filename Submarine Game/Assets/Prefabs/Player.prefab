@@ -193,6 +193,7 @@ GameObject:
   - component: {fileID: 1600749735348907824}
   - component: {fileID: 4993412933734988886}
   - component: {fileID: 5475229896001176349}
+  - component: {fileID: 71978056554288299}
   m_Layer: 7
   m_Name: Player
   m_TagString: Player
@@ -515,3 +516,28 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13c7695809628a842bb49420199c2f91, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sanitySlider: {fileID: 0}
+  mCurrentSanity: {fileID: 11400000, guid: fe92b2b086f629d4fb045a33b63a5c65, type: 2}
+  mMaxSanity: {fileID: 11400000, guid: 5e33d0a03c0a21448bbc19f0cf001241, type: 2}
+  mTriggerChecker: {fileID: 71978056554288299}
+  mSanityDrainMask:
+    serializedVersion: 2
+    m_Bits: 1024
+  defaultDrainAmount: 1
+  canDie: 1
+--- !u!114 &71978056554288299
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7810895610180731133}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2ce46ea9c0afbe540aea6a7793d437c7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  layerToCheck:
+    serializedVersion: 2
+    m_Bits: 512
+  isInTrigger: 0
