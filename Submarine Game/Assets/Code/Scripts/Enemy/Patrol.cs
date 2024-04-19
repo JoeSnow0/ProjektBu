@@ -8,6 +8,7 @@ using static EnemyController;
 public class Patrol : EnemyStates
 {
     [SerializeField] EnemyController enemyController;
+    [SerializeField] Transform PatrolRouteHolder;
     public Transform[] points;
     private int destPoint = 0;
     float minDistanceBeforeMovingOn = 0.2f;
@@ -15,8 +16,18 @@ public class Patrol : EnemyStates
 
     void Start()
     {
-        agent = GetComponent<NavMeshAgent>();
+        //Adding the list of points and removing the points holder (cause its not supposed to be included, duh!)
+        Transform[] tempArray = PatrolRouteHolder.GetComponentsInChildren<Transform>();
+        List<Transform> tempList = new List<Transform>();
+        foreach(Transform t in tempArray)
+        {
+            tempList.Add(t);
+        }
+        tempList.Remove(tempList[0]);
+        points = tempList.ToArray();
 
+        //Start patrolling!
+        agent = GetComponent<NavMeshAgent>();
         mState = EnemyController.EnemyState.Patrol;
         GotoNextPoint();
         
