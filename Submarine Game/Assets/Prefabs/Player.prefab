@@ -523,7 +523,7 @@ MonoBehaviour:
   mSanityDrainMask:
     serializedVersion: 2
     m_Bits: 1024
-  defaultDrainAmount: 1
+  defaultDrainAmount: 10
   canDie: 1
 --- !u!114 &71978056554288299
 MonoBehaviour:

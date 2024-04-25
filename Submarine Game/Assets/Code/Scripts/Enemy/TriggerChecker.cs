@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class TriggerChecker : MonoBehaviour
 {
-    [SerializeField] LayerMask layerToCheck;
+    public LayerMask layerToCheck;
     public bool isInTrigger = false;
     Collider ColliderOfTarget;
     private void OnTriggerStay(Collider other)
