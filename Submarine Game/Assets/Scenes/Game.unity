@@ -357,10 +357,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: DiningRoom 10x10m
       objectReference: {fileID: 0}
-    - target: {fileID: 995878470491457284, guid: 7f9957bc285cc964fadc000125454041, type: 3}
-      propertyPath: m_Material
-      value: 
-      objectReference: {fileID: 13400000, guid: 4e573772ad6b18f4db98988ebf3134fd, type: 2}
     - target: {fileID: 6494314552000654361, guid: 7f9957bc285cc964fadc000125454041, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
