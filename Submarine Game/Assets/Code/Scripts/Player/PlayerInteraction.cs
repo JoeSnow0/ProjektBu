@@ -57,8 +57,12 @@ public class PlayerInteraction : MonoBehaviour
             RaycastHit hit = CheckInteractable();
             if (hit.collider != null)
             {
+                if(hit.transform.GetComponent<InteractableNamedItem>() != null)
+                {
+
+                }
                 //Check for notes
-                if(hit.transform.GetComponent<InteractableNotes>() != null)
+                if (hit.transform.GetComponent<InteractableNotes>() != null)
                 {
                     NotesText.text = hit.transform.gameObject.GetComponent<InteractableNotes>().myText.text;
                     NotesPanel.gameObject.SetActive(true);
@@ -74,7 +78,10 @@ public class PlayerInteraction : MonoBehaviour
                     myKeys.Add(hit.transform.GetComponent<PickUpKey>().mKey);
 
                 }
-                hit.transform.GetComponent<Interactable>().InteractionTriggered();
+                if ((interactableMask & (1 << hit.transform.gameObject.layer)) != 0)
+                {
+                    hit.transform.GetComponent<Interactable>().InteractionTriggered();
+                }
             }
         }
     }
