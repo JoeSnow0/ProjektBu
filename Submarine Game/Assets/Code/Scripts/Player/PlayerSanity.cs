@@ -19,6 +19,7 @@ public class PlayerSanity : MonoBehaviour
     private void Start()
     {
         mCurrentSanity.value = mMaxSanity.value;
+        mTriggerChecker.layerToCheck = mSanityDrainMask;
     }
 
     //Function to call to clamp sanity value between min and max values;
