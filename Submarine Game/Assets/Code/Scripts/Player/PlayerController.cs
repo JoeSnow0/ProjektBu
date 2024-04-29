@@ -1,9 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Net.Security;
 using Unity.VisualScripting;
 using Unity.VisualScripting.InputSystem;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using static UnityEngine.UI.Image;
 
 public class PlayerController : MonoBehaviour
 {
@@ -15,6 +17,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] CapsuleCollider mBodyCollider;
     [SerializeField] Rigidbody mRigidbody;
     [SerializeField] Camera mCam;
+    [SerializeField] LayerMask mObstacleMask;
 
     //External Refs
 
@@ -67,6 +70,12 @@ public class PlayerController : MonoBehaviour
     float xRotation = 0f;
     float yRotation = 0f;
 
+    //Crouch
+    bool isStanding = true;
+
+    bool m_HitDetect = false;
+    RaycastHit hit;
+
     private void Start()
     {
         InitializePlayer();
@@ -86,9 +95,14 @@ public class PlayerController : MonoBehaviour
 
     void SetPlayerHeight(float newHeight)
     {
+        float oldHeight = mBodyCollider.height;
         mBodyCollider.height = newHeight;
+        //transform.position = new Vector3(transform.position.x,   - oldHeight + newHeight, transform.position.z);
+
         //Adjust the position of the head to be at the top of the collider
         mHead.transform.localPosition = new Vector3(0f, mBodyCollider.height * 0.5f - mHead.transform.localScale.y * 0.5f, 0f);
+        
+        
     }
     public void MoveInput(InputAction.CallbackContext context)
     {
@@ -126,35 +140,52 @@ public class PlayerController : MonoBehaviour
         transform.localRotation = Quaternion.Euler(0f, yRotation, 0f);
     }
 
-    void crouch()
+    void CrouchCheck()
     {
         if (mCrouchInput > 0f) 
         {
             //transform.localScale = new Vector3(transform.localScale.x, crouchHeight);
 
             //transform.position = new Vector3(transform.position.x, transform.position.y - 0.5f, transform.position.z);
-
+            isStanding = false;
             SetPlayerHeight(crouchHeight);
         }
 
-        if (mCrouchInput == 0f)
+        if (mCrouchInput == 0f && isStanding == false)
         {
-            
+            //Check for space above player
+            //Boxcast WHY
+            float maxDistance = height - crouchHeight;
+            m_HitDetect = Physics.BoxCast(transform.position, transform.lossyScale * 0.5f, transform.up, out hit, transform.rotation, maxDistance, mObstacleMask);
+            //Debug.Log(hit.transform.gameObject.name + ": This object is in the way");
+            if(m_HitDetect)
+            {
+                //Remain crouched
+                Debug.Log(hit.transform.name);
+                Debug.Log("Staying Crouched");
+
+            }
+            else
+            {
+                Debug.Log("Standing up");
+                SetPlayerHeight(height);
+                isStanding = true;
+            }
             //transform.localScale = new Vector3(transform.localScale.x, crouchHeight);
             //transform.position = new Vector3(transform.position.x, transform.position.y + 0.5f);
-            SetPlayerHeight(height);
         }
     }
     private void Update()
     {
         Look();
-        crouch();
+        //CrouchCheck();
     }
     private void FixedUpdate()
     {
         //Movement is processed in fixed updates so it lines up with the physics checks
         Movement();
+        CrouchCheck();
 
-        
+
     }
 }
