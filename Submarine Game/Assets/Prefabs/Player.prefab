@@ -234,6 +234,9 @@ MonoBehaviour:
   mBodyCollider: {fileID: 4249598564946565949}
   mRigidbody: {fileID: 2572927738586991996}
   mCam: {fileID: 8647036892413363336}
+  mObstacleMask:
+    serializedVersion: 2
+    m_Bits: 256
   height: 1.7
   crouchHeight: 1
   crouchSpeed: 0
