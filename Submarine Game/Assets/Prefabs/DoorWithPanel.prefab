@@ -63,6 +63,7 @@ Transform:
   m_Children:
   - {fileID: 1133777221524339657}
   - {fileID: 3364516619213537221}
+  - {fileID: 4085925605397858203}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!1001 &3354264925426579962
@@ -136,6 +137,112 @@ Transform:
 Animator:
   m_CorrespondingSourceObject: {fileID: 3541327159675183219, guid: 4dc5f033d7b90ef4cb2cfde39bc2b340, type: 3}
   m_PrefabInstance: {fileID: 3354264925426579962}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &4858717868596916058
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 5630965382166097150}
+    m_Modifications:
+    - target: {fileID: 931401304367457623, guid: c577ada734bdb7c49b6ece5aecb309a9, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: d0688e49d01180e4aa619d8ce8aa39fb, type: 2}
+    - target: {fileID: 977644720912533896, guid: c577ada734bdb7c49b6ece5aecb309a9, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: d0688e49d01180e4aa619d8ce8aa39fb, type: 2}
+    - target: {fileID: 1231078690915031665, guid: c577ada734bdb7c49b6ece5aecb309a9, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: d0688e49d01180e4aa619d8ce8aa39fb, type: 2}
+    - target: {fileID: 2798857805357025033, guid: c577ada734bdb7c49b6ece5aecb309a9, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: d0688e49d01180e4aa619d8ce8aa39fb, type: 2}
+    - target: {fileID: 3280523397592215924, guid: c577ada734bdb7c49b6ece5aecb309a9, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: d0688e49d01180e4aa619d8ce8aa39fb, type: 2}
+    - target: {fileID: 3463529961659167384, guid: c577ada734bdb7c49b6ece5aecb309a9, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: d0688e49d01180e4aa619d8ce8aa39fb, type: 2}
+    - target: {fileID: 4556523207783027455, guid: c577ada734bdb7c49b6ece5aecb309a9, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: d0688e49d01180e4aa619d8ce8aa39fb, type: 2}
+    - target: {fileID: 4694385359893549729, guid: c577ada734bdb7c49b6ece5aecb309a9, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: d0688e49d01180e4aa619d8ce8aa39fb, type: 2}
+    - target: {fileID: 5456215105339931388, guid: c577ada734bdb7c49b6ece5aecb309a9, type: 3}
+      propertyPath: m_Name
+      value: Fake Key
+      objectReference: {fileID: 0}
+    - target: {fileID: 5967635244873923782, guid: c577ada734bdb7c49b6ece5aecb309a9, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: d0688e49d01180e4aa619d8ce8aa39fb, type: 2}
+    - target: {fileID: 8125620370890755386, guid: c577ada734bdb7c49b6ece5aecb309a9, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: d0688e49d01180e4aa619d8ce8aa39fb, type: 2}
+    - target: {fileID: 8670956455905218405, guid: c577ada734bdb7c49b6ece5aecb309a9, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: d0688e49d01180e4aa619d8ce8aa39fb, type: 2}
+    - target: {fileID: 8924372597377231041, guid: c577ada734bdb7c49b6ece5aecb309a9, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1.2650003
+      objectReference: {fileID: 0}
+    - target: {fileID: 8924372597377231041, guid: c577ada734bdb7c49b6ece5aecb309a9, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.36399984
+      objectReference: {fileID: 0}
+    - target: {fileID: 8924372597377231041, guid: c577ada734bdb7c49b6ece5aecb309a9, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 3.5072708
+      objectReference: {fileID: 0}
+    - target: {fileID: 8924372597377231041, guid: c577ada734bdb7c49b6ece5aecb309a9, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8924372597377231041, guid: c577ada734bdb7c49b6ece5aecb309a9, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8924372597377231041, guid: c577ada734bdb7c49b6ece5aecb309a9, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8924372597377231041, guid: c577ada734bdb7c49b6ece5aecb309a9, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8924372597377231041, guid: c577ada734bdb7c49b6ece5aecb309a9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: 8924372597377231041, guid: c577ada734bdb7c49b6ece5aecb309a9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 8924372597377231041, guid: c577ada734bdb7c49b6ece5aecb309a9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: c577ada734bdb7c49b6ece5aecb309a9, type: 3}
+--- !u!4 &4085925605397858203 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8924372597377231041, guid: c577ada734bdb7c49b6ece5aecb309a9, type: 3}
+  m_PrefabInstance: {fileID: 4858717868596916058}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &8040007902268232525
 PrefabInstance:
@@ -253,7 +360,7 @@ MonoBehaviour:
   mItemName: Door Control Panel
   animationSpeed: 1
   mAnim: {fileID: 2281614602284013961}
-  requiredKey: {fileID: 0}
+  requiredKey: {fileID: 11400000, guid: c44c25b053c04224286e70146572d207, type: 2}
   NormalizedTime: 0
 --- !u!4 &7501134319003727014 stripped
 Transform:
