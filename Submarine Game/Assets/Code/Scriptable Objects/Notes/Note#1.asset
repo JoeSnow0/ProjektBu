@@ -12,9 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2853ffee04193004795b9f3d21200205, type: 3}
   m_Name: Note#1
   m_EditorClassIdentifier: 
-  text: "Don't look at the eye Don't look at the eye Don't look at the eye Don't
-    look at the eye Don't look at the eye Don't look at the eye Don't look at the
-    eye Don't look at the eye Don't look at the eye Don't look at the eye Don't look
-    at the eye Don't look at the eye Don't look at the eye Don't look at the eye
-    Don't look at the eye Don't look at the eye Don't look at the eye Don't look
-    at the eye Don't look at the eye \n\n\nDon't look at the eye!"
+  text: 'I left my keycard in the dining room...But that THING is in there...
+
+
+    I
+    can''t get out, what did we do wrong?!'
