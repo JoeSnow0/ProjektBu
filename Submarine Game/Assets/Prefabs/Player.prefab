@@ -519,7 +519,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13c7695809628a842bb49420199c2f91, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sanitySlider: {fileID: 0}
   mCurrentSanity: {fileID: 11400000, guid: fe92b2b086f629d4fb045a33b63a5c65, type: 2}
   mMaxSanity: {fileID: 11400000, guid: 5e33d0a03c0a21448bbc19f0cf001241, type: 2}
   mTriggerChecker: {fileID: 71978056554288299}
@@ -528,6 +527,8 @@ MonoBehaviour:
     m_Bits: 1024
   defaultDrainAmount: 10
   canDie: 1
+  mPlayerUIPrefab: {fileID: 6160778366882295356, guid: e282241d1f9e4f642a6688b7ac926026, type: 3}
+  mPlayerUI: {fileID: 0}
 --- !u!114 &71978056554288299
 MonoBehaviour:
   m_ObjectHideFlags: 0

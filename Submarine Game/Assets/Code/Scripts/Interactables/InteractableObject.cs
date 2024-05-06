@@ -13,7 +13,17 @@ public class InteractableObject : Interactable
     bool isPlaying = false;
     AnimatorStateInfo animStateInfo;
     public float NormalizedTime;
-
+    [SerializeField] MeshRenderer[] KeyDisplay;
+    private void Start()
+    {
+        if(requiredKey != null)
+        {
+            foreach(var key in KeyDisplay)
+            {
+                key.material = requiredKey.KeyMaterial;
+            }
+        }
+    }
     private void Update()
     {
         checkAnimationIsPlaying();

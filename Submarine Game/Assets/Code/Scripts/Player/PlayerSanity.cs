@@ -6,7 +6,6 @@ using UnityEngine.UI;
 
 public class PlayerSanity : MonoBehaviour
 {
-    [SerializeField] Slider sanitySlider;
     [SerializeField] FloatReference mCurrentSanity; 
     [SerializeField] FloatReference mMaxSanity;
     float mMinSanity = 0;
@@ -14,11 +13,21 @@ public class PlayerSanity : MonoBehaviour
     [SerializeField] LayerMask mSanityDrainMask;
     [SerializeField] float defaultDrainAmount = 1f;
     [SerializeField] bool canDie = true;
+    [SerializeField] PlayerUIController mPlayerUIPrefab;
+    [SerializeField] PlayerUIController mPlayerUI;
 
     private void Start()
     {
         mCurrentSanity.value = mMaxSanity.value;
         mTriggerChecker.layerToCheck = mSanityDrainMask;
+        if(mPlayerUI == null)
+        {
+            mPlayerUI = FindObjectOfType<PlayerUIController>();
+             if(mPlayerUI == null)
+            {
+                mPlayerUI = Instantiate(mPlayerUIPrefab);
+            }
+        }
     }
 
     //Function to call to clamp sanity value between min and max values;
@@ -41,11 +50,11 @@ public class PlayerSanity : MonoBehaviour
     //What happens if the player loses all sanity
     void Death()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        Cursor.lockState = CursorLockMode.None;
+        SceneManager.LoadScene("EndScene");
     }
     private void Update()
     {
-        sanitySlider.value = mCurrentSanity.value;
         if(canDie && mCurrentSanity.value <= mMinSanity)
         {
             Death();
