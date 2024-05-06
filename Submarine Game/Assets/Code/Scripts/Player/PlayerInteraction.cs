@@ -16,20 +16,26 @@ public class PlayerInteraction : MonoBehaviour
     public List<Key> myKeys =  new List<Key>();
     [SerializeField] float maxDistance;
     [SerializeField] LayerMask interactableMask;
-    [SerializeField] Image NotesPanel;
-    [SerializeField] Image InteractablePanel;
-    [SerializeField] TextMeshProUGUI interactableHUDText;
-    [SerializeField] TextMeshProUGUI NotesText;
     Vector3 origin;
     Vector3 direction;
     bool mInteractInput;
+    [SerializeField] PlayerUIController mPlayerUIPrefab;
+    [SerializeField] PlayerUIController mPlayerUI;
 
     private void Start()
     {
-        NotesPanel.gameObject.SetActive(false);
-        InteractablePanel.gameObject.SetActive(false);
-        interactableHUDText.text = "";
-        NotesText.text = "";
+        if (mPlayerUI == null)
+        {
+            mPlayerUI = FindObjectOfType<PlayerUIController>();
+            if (mPlayerUI == null)
+            {
+                mPlayerUI = Instantiate(mPlayerUIPrefab);
+            }
+        }
+        mPlayerUI.NotesPanel.gameObject.SetActive(false);
+        mPlayerUI.InteractablePanel.gameObject.SetActive(false);
+        mPlayerUI.interactableHUDText.text = "";
+        mPlayerUI.NotesText.text = "";
         myKeys.Clear();
     }
     public void InteractInput(InputAction.CallbackContext context)
@@ -64,12 +70,21 @@ public class PlayerInteraction : MonoBehaviour
                 //Check for notes
                 if (hit.transform.GetComponent<InteractableNotes>() != null)
                 {
-                    NotesText.text = hit.transform.gameObject.GetComponent<InteractableNotes>().myText.text;
-                    NotesPanel.gameObject.SetActive(true);
+                    //Grab the text
+                    string text = hit.transform.gameObject.GetComponent<InteractableNotes>().myText.text;
+                    if (text != null)
+                    {
+                        mPlayerUI.NotesText.text = text;
+                    }
+                    else
+                    {
+                        mPlayerUI.NotesText.text = "Missing text file";
+                    }
+                    mPlayerUI.NotesPanel.gameObject.SetActive(true);
                 }
                 else
                 {
-                    NotesPanel.gameObject.SetActive(false);
+                    mPlayerUI.NotesPanel.gameObject.SetActive(false);
                 }
                 //check for pickups
                 if (hit.transform.GetComponent<PickUpKey>() != null)
@@ -93,16 +108,16 @@ public class PlayerInteraction : MonoBehaviour
         {
             if(hit.transform.gameObject.GetComponent<Interactable>() != null)
             {
-                interactableHUDText.text = hit.transform.gameObject.GetComponent<Interactable>().mItemName;
-                InteractablePanel.gameObject.SetActive(true);
+                mPlayerUI.interactableHUDText.text = hit.transform.gameObject.GetComponent<Interactable>().mItemName;
+                mPlayerUI.InteractablePanel.gameObject.SetActive(true);
             }
         }
         else
         {
-            InteractablePanel.gameObject.SetActive(false);
-            interactableHUDText.text = "";
-            NotesPanel.gameObject.SetActive(false);
-            NotesText.text = "";
+            mPlayerUI.InteractablePanel.gameObject.SetActive(false);
+            mPlayerUI.interactableHUDText.text = "";
+            mPlayerUI.NotesPanel.gameObject.SetActive(false);
+            mPlayerUI.NotesText.text = "";
         }
     }
     private void Update()
