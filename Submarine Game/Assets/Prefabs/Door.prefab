@@ -16,7 +16,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 1
   m_IsActive: 1
 --- !u!4 &183857052320753933
 Transform:
@@ -99,7 +99,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 1
   m_IsActive: 1
 --- !u!4 &4049222564275102736
 Transform:
@@ -289,7 +289,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 1
   m_IsActive: 1
 --- !u!4 &5590318973544162600
 Transform:
@@ -395,7 +395,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 1
   m_IsActive: 1
 --- !u!4 &365220180122144201
 Transform:
@@ -501,7 +501,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 1
   m_IsActive: 1
 --- !u!4 &8724974978024753502
 Transform:
@@ -605,7 +605,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 1
   m_IsActive: 1
 --- !u!4 &8705739547870342662
 Transform:
@@ -1011,6 +1011,7 @@ MonoBehaviour:
   mAnim: {fileID: 3541327159675183219}
   requiredKey: {fileID: 0}
   NormalizedTime: 0
+  KeyDisplay: []
 --- !u!65 &2944896038968916967
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1049,7 +1050,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 1
   m_IsActive: 1
 --- !u!4 &3506689425841847237
 Transform:
@@ -1345,6 +1346,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Wall doorframe
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 01a0fe4111cb57149acc0940a71f9d10, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1452,6 +1457,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: f2354e0d9892e8d4e8a2c86649c7cda3, type: 3}
       propertyPath: m_Name
       value: Valve Door02BLUE
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: f2354e0d9892e8d4e8a2c86649c7cda3, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
