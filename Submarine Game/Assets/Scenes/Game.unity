@@ -316,6 +316,10 @@ PrefabInstance:
       propertyPath: requiredKey
       value: 
       objectReference: {fileID: 11400000, guid: 91e650479841ca54c90a8f3fad08bcdb, type: 2}
+    - target: {fileID: 3576574545174851441, guid: ea2c7c41bec3af442a7f565761e34462, type: 3}
+      propertyPath: requiredKey
+      value: 
+      objectReference: {fileID: 11400000, guid: 91e650479841ca54c90a8f3fad08bcdb, type: 2}
     - target: {fileID: 4220594160941675592, guid: ea2c7c41bec3af442a7f565761e34462, type: 3}
       propertyPath: m_Name
       value: DoorWithPanel (1)
@@ -847,6 +851,30 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1728591938}
     m_Modifications:
+    - target: {fileID: 18987072043177671, guid: 6c1e2fab6c7ffc2428e7068be8346b87, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 658806025072957626, guid: 6c1e2fab6c7ffc2428e7068be8346b87, type: 3}
+      propertyPath: m_Name
+      value: Point Light
+      objectReference: {fileID: 0}
+    - target: {fileID: 878187561535380385, guid: 6c1e2fab6c7ffc2428e7068be8346b87, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 994460765366577797, guid: 6c1e2fab6c7ffc2428e7068be8346b87, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2282994787023825872, guid: 6c1e2fab6c7ffc2428e7068be8346b87, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3080567732212354371, guid: 6c1e2fab6c7ffc2428e7068be8346b87, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3694645178201561455, guid: 6c1e2fab6c7ffc2428e7068be8346b87, type: 3}
       propertyPath: m_LocalPosition.x
       value: 13.5
@@ -887,9 +915,45 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3745349555231940547, guid: 6c1e2fab6c7ffc2428e7068be8346b87, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3838120874874598957, guid: 6c1e2fab6c7ffc2428e7068be8346b87, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4404669519712729290, guid: 6c1e2fab6c7ffc2428e7068be8346b87, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4901513025696158968, guid: 6c1e2fab6c7ffc2428e7068be8346b87, type: 3}
+      propertyPath: m_Name
+      value: Halo Light
+      objectReference: {fileID: 0}
+    - target: {fileID: 5525835671617994674, guid: 6c1e2fab6c7ffc2428e7068be8346b87, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5550649619870264468, guid: 6c1e2fab6c7ffc2428e7068be8346b87, type: 3}
       propertyPath: m_Name
       value: T Corridor Short
+      objectReference: {fileID: 0}
+    - target: {fileID: 5782067900641172713, guid: 6c1e2fab6c7ffc2428e7068be8346b87, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5823701700476708874, guid: 6c1e2fab6c7ffc2428e7068be8346b87, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6263314003333503356, guid: 6c1e2fab6c7ffc2428e7068be8346b87, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8653568196633745892, guid: 6c1e2fab6c7ffc2428e7068be8346b87, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1107,6 +1171,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2687250366386984021, guid: ea2c7c41bec3af442a7f565761e34462, type: 3}
+      propertyPath: requiredKey
+      value: 
+      objectReference: {fileID: 11400000, guid: c44c25b053c04224286e70146572d207, type: 2}
+    - target: {fileID: 3576574545174851441, guid: ea2c7c41bec3af442a7f565761e34462, type: 3}
       propertyPath: requiredKey
       value: 
       objectReference: {fileID: 11400000, guid: c44c25b053c04224286e70146572d207, type: 2}
@@ -1806,6 +1874,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1728591938}
     m_Modifications:
+    - target: {fileID: 2687250366386984021, guid: ea2c7c41bec3af442a7f565761e34462, type: 3}
+      propertyPath: requiredKey
+      value: 
+      objectReference: {fileID: 11400000, guid: 52317f83e2ab17c428120e87fe0f7953, type: 2}
+    - target: {fileID: 3576574545174851441, guid: ea2c7c41bec3af442a7f565761e34462, type: 3}
+      propertyPath: requiredKey
+      value: 
+      objectReference: {fileID: 11400000, guid: 52317f83e2ab17c428120e87fe0f7953, type: 2}
     - target: {fileID: 4220594160941675592, guid: ea2c7c41bec3af442a7f565761e34462, type: 3}
       propertyPath: m_Name
       value: DoorWithPanel (2)
@@ -1973,6 +2049,22 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1773663142}
     m_Modifications:
+    - target: {fileID: 56194695949954746, guid: f34917a8fa887b34088afdea84279a67, type: 3}
+      propertyPath: m_Size.x
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 56194695949954746, guid: f34917a8fa887b34088afdea84279a67, type: 3}
+      propertyPath: m_Size.y
+      value: 2.220446e-16
+      objectReference: {fileID: 0}
+    - target: {fileID: 56194695949954746, guid: f34917a8fa887b34088afdea84279a67, type: 3}
+      propertyPath: m_Size.z
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 56194695949954746, guid: f34917a8fa887b34088afdea84279a67, type: 3}
+      propertyPath: m_Center.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2294825259543156283, guid: f34917a8fa887b34088afdea84279a67, type: 3}
       propertyPath: myText
       value: 
@@ -1983,7 +2075,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4585986384338863039, guid: f34917a8fa887b34088afdea84279a67, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.8000002
+      value: 0.811
       objectReference: {fileID: 0}
     - target: {fileID: 4585986384338863039, guid: f34917a8fa887b34088afdea84279a67, type: 3}
       propertyPath: m_LocalPosition.z
@@ -2020,6 +2112,14 @@ PrefabInstance:
     - target: {fileID: 6449720379223059959, guid: f34917a8fa887b34088afdea84279a67, type: 3}
       propertyPath: m_Name
       value: Note#1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7386755212896512912, guid: f34917a8fa887b34088afdea84279a67, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.08
+      objectReference: {fileID: 0}
+    - target: {fileID: 7386755212896512912, guid: f34917a8fa887b34088afdea84279a67, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.11
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

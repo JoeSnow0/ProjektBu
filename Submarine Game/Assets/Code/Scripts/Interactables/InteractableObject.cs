@@ -8,7 +8,7 @@ public class InteractableObject : Interactable
 {
     [SerializeField] float animationSpeed = 1f;
     [SerializeField] Animator mAnim;
-    bool opened = false;
+    //bool opened = false;
     [SerializeField] Key requiredKey;
     bool isPlaying = false;
     AnimatorStateInfo animStateInfo;
