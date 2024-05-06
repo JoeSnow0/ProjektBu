@@ -14,3 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   KeyName: Purple Key
   aquiredOrRequired: 0
+  KeyMaterial: {fileID: 2100000, guid: 165d1cd6300f8e840b9aed45f46ddaa7, type: 2}

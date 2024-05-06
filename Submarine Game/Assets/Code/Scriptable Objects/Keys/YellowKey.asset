@@ -14,3 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   KeyName: Yellow Key
   aquiredOrRequired: 0
+  KeyMaterial: {fileID: 2100000, guid: 9174a32e5b2f664418c95e53aa65fd0a, type: 2}

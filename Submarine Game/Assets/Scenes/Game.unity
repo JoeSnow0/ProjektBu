@@ -312,6 +312,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1728591938}
     m_Modifications:
+    - target: {fileID: 2687250366386984021, guid: ea2c7c41bec3af442a7f565761e34462, type: 3}
+      propertyPath: requiredKey
+      value: 
+      objectReference: {fileID: 11400000, guid: 91e650479841ca54c90a8f3fad08bcdb, type: 2}
     - target: {fileID: 4220594160941675592, guid: ea2c7c41bec3af442a7f565761e34462, type: 3}
       propertyPath: m_Name
       value: DoorWithPanel (1)
@@ -1102,6 +1106,10 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2687250366386984021, guid: ea2c7c41bec3af442a7f565761e34462, type: 3}
+      propertyPath: requiredKey
+      value: 
+      objectReference: {fileID: 11400000, guid: c44c25b053c04224286e70146572d207, type: 2}
     - target: {fileID: 4220594160941675592, guid: ea2c7c41bec3af442a7f565761e34462, type: 3}
       propertyPath: m_Name
       value: DoorWithPanel
@@ -1389,7 +1397,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1195032454458625865, guid: 54edcc2d51aa2d14f8693a69126f27af, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 8.3
+      value: 13.2
       objectReference: {fileID: 0}
     - target: {fileID: 1195032454458625865, guid: 54edcc2d51aa2d14f8693a69126f27af, type: 3}
       propertyPath: m_LocalPosition.y
@@ -1397,7 +1405,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1195032454458625865, guid: 54edcc2d51aa2d14f8693a69126f27af, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.04157448
+      value: -15.3
       objectReference: {fileID: 0}
     - target: {fileID: 1195032454458625865, guid: 54edcc2d51aa2d14f8693a69126f27af, type: 3}
       propertyPath: m_LocalRotation.w
