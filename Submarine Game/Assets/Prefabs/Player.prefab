@@ -237,7 +237,7 @@ MonoBehaviour:
   mCam: {fileID: 8647036892413363336}
   mObstacleMask:
     serializedVersion: 2
-    m_Bits: 256
+    m_Bits: 265
   height: 1.7
   crouchHeight: 1
   crouchSpeed: 0

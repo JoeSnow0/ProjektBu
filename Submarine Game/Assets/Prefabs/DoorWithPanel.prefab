@@ -306,7 +306,7 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.023891246, y: 0.022179488, z: 0.023995383}
+  m_Size: {x: 0.023891246, y: 0.022179488, z: 0.14}
   m_Center: {x: -9.313225e-10, y: 4.656613e-10, z: 0.0019976916}
 --- !u!114 &3576574545174851441
 MonoBehaviour:
@@ -473,7 +473,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8715377567457193217, guid: c577ada734bdb7c49b6ece5aecb309a9, type: 3}
+    - {fileID: 8078153642426159637, guid: c577ada734bdb7c49b6ece5aecb309a9, type: 3}
+    - {fileID: 2494908318215991657, guid: c577ada734bdb7c49b6ece5aecb309a9, type: 3}
+    - {fileID: 8590794704600615403, guid: c577ada734bdb7c49b6ece5aecb309a9, type: 3}
+    - {fileID: 1577478280840492075, guid: c577ada734bdb7c49b6ece5aecb309a9, type: 3}
+    - {fileID: 6082060855737969714, guid: c577ada734bdb7c49b6ece5aecb309a9, type: 3}
+    - {fileID: 5469066988137579032, guid: c577ada734bdb7c49b6ece5aecb309a9, type: 3}
+    - {fileID: 286507475320242054, guid: c577ada734bdb7c49b6ece5aecb309a9, type: 3}
+    - {fileID: 6062698303649534821, guid: c577ada734bdb7c49b6ece5aecb309a9, type: 3}
+    - {fileID: 6164612786175211591, guid: c577ada734bdb7c49b6ece5aecb309a9, type: 3}
+    - {fileID: 3963686418204633245, guid: c577ada734bdb7c49b6ece5aecb309a9, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -644,7 +655,7 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.023891246, y: 0.022179488, z: 0.023995383}
+  m_Size: {x: 0.023891246, y: 0.022179488, z: 0.14}
   m_Center: {x: -9.313225e-10, y: 4.656613e-10, z: 0.0019976916}
 --- !u!114 &2687250366386984021
 MonoBehaviour:
