@@ -124,7 +124,15 @@ public class PlayerController : MonoBehaviour
     {
         //Move forward in the direction the player body is facing
         Vector3 move = transform.right * mMoveInput.x + transform.forward * mMoveInput.y;
-        mRigidbody.MovePosition(mRigidbody.position + move * movementSpeed * Time.deltaTime);
+        if(isStanding)
+        {
+
+            mRigidbody.MovePosition(mRigidbody.position + move * movementSpeed * Time.deltaTime);
+        }
+        else
+        {
+            mRigidbody.MovePosition(mRigidbody.position + move * crouchSpeed * Time.deltaTime);
+        }
     }
     void Look()
     {
@@ -144,9 +152,6 @@ public class PlayerController : MonoBehaviour
     {
         if (mCrouchInput > 0f) 
         {
-            //transform.localScale = new Vector3(transform.localScale.x, crouchHeight);
-
-            //transform.position = new Vector3(transform.position.x, transform.position.y - 0.5f, transform.position.z);
             isStanding = false;
             SetPlayerHeight(crouchHeight);
         }
@@ -154,10 +159,8 @@ public class PlayerController : MonoBehaviour
         if (mCrouchInput == 0f && isStanding == false)
         {
             //Check for space above player
-            //Boxcast WHY
             float maxDistance = height - crouchHeight;
             m_HitDetect = Physics.BoxCast(transform.position, transform.lossyScale * 0.5f, transform.up, out hit, transform.rotation, maxDistance, mObstacleMask);
-            //Debug.Log(hit.transform.gameObject.name + ": This object is in the way");
             if(m_HitDetect)
             {
                 //Remain crouched
@@ -167,12 +170,11 @@ public class PlayerController : MonoBehaviour
             }
             else
             {
+                //Stand up
                 Debug.Log("Standing up");
                 SetPlayerHeight(height);
                 isStanding = true;
             }
-            //transform.localScale = new Vector3(transform.localScale.x, crouchHeight);
-            //transform.position = new Vector3(transform.position.x, transform.position.y + 0.5f);
         }
     }
     private void Update()
