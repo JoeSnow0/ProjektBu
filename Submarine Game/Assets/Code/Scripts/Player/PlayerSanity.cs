@@ -11,7 +11,7 @@ public class PlayerSanity : MonoBehaviour
     float mMinSanity = 0;
     [SerializeField] TriggerChecker mTriggerChecker;
     [SerializeField] LayerMask mSanityDrainMask;
-    [SerializeField] float defaultDrainAmount = 1f;
+    [SerializeField] float defaultDrainAmount = 5f;
     [SerializeField] bool canDie = true;
     [SerializeField] PlayerUIController mPlayerUIPrefab;
     [SerializeField] PlayerUIController mPlayerUI;
@@ -33,10 +33,10 @@ public class PlayerSanity : MonoBehaviour
     //Function to call to clamp sanity value between min and max values;
     private void ClampSanity(float numberToClamp)
     {
-        Mathf.Clamp(numberToClamp, mMinSanity, mMaxSanity.value);
+        mCurrentSanity.value = Mathf.Clamp(numberToClamp, mMinSanity, mMaxSanity.value);
     }
     //Function to call to increase sanity
-    void addSanity(float amount)
+    public void addSanity(float amount)
     {
         mCurrentSanity.value += amount;
         ClampSanity(mCurrentSanity.value);

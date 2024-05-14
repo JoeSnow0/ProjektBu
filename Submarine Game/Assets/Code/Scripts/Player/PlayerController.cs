@@ -168,14 +168,14 @@ public class PlayerController : MonoBehaviour
             if(m_HitDetect)
             {
                 //Remain crouched
-                Debug.Log(hit.transform.name);
-                Debug.Log("Staying Crouched");
+                //Debug.Log(hit.transform.name);
+                //Debug.Log("Staying Crouched");
 
             }
             else
             {
                 //Stand up
-                Debug.Log("Standing up");
+                //Debug.Log("Standing up");
                 SetPlayerHeight(height);
                 isStanding = true;
             }
