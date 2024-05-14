@@ -7,17 +7,28 @@ using UnityEngine.UI;
 
 public abstract class EnemyController : MonoBehaviour
 {
-
-    public EnemyState mCurrentState;
-    NavMeshSurface mNavMeshSurface;
-    public TriggerChecker playerChecker;
-    public bool IsTargetSeen = false;
-    public enum EnemyState { Patrol, Chase, Freeze };
-    public EnemyStates[] mStates;
-    public Transform raycastOrigin;
+    //Internal Refs
+    [Header("Player References")]
+    [Tooltip("Internal References (assigned before start)")]
     public LayerMask playerMask;
     public LayerMask obstacleMask;
     public LayerMask checkMask;
+    public Transform raycastOrigin;
+    public TriggerChecker playerChecker;
+    public AudioSource mAudioSource;
+
+    //External Refs
+    [Header("External References")]
+    [Tooltip("found at start, make sure its in the scene")]
+    public AudioManager mAudioManager;
+    NavMeshSurface mNavMeshSurface;
+
+
+    public bool IsTargetSeen = false;
+    public enum EnemyState { Patrol, Chase, Freeze };
+    public EnemyStates[] mStates;
+    public EnemyState mCurrentState;
+
     public void Chase()
     {
         raycastOrigin.transform.gameObject.name = "test";
