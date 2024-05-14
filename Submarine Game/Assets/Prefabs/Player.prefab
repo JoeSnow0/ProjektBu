@@ -240,6 +240,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 265
   mAudioSource: {fileID: 8735333724084527450}
+  mAudioManager: {fileID: 0}
   height: 1.7
   crouchHeight: 1
   crouchSpeed: 1.5
@@ -288,7 +289,7 @@ MonoBehaviour:
   mSanityDrainMask:
     serializedVersion: 2
     m_Bits: 1024
-  defaultDrainAmount: 10
+  defaultDrainAmount: 30
   canDie: 1
   mPlayerUIPrefab: {fileID: 6160778366882295356, guid: e282241d1f9e4f642a6688b7ac926026, type: 3}
   mPlayerUI: {fileID: 0}

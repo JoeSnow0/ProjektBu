@@ -11,7 +11,7 @@ public class PlayerSanity : MonoBehaviour
     float mMinSanity = 0;
     [SerializeField] TriggerChecker mTriggerChecker;
     [SerializeField] LayerMask mSanityDrainMask;
-    [SerializeField] float defaultDrainAmount = 1f;
+    [SerializeField] float defaultDrainAmount = 5f;
     [SerializeField] bool canDie = true;
     [SerializeField] PlayerUIController mPlayerUIPrefab;
     [SerializeField] PlayerUIController mPlayerUI;
