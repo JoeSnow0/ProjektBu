@@ -10,7 +10,7 @@ using static UnityEngine.UI.Image;
 public class PlayerController : MonoBehaviour
 {
     //Internal Refs
-    [Header("Character References")]
+    [Header("Player References")]
     [Header("Internal References (assigned before start)")]
     [SerializeField] GameObject mHead;
     [SerializeField] GameObject mBody;
@@ -18,9 +18,12 @@ public class PlayerController : MonoBehaviour
     [SerializeField] Rigidbody mRigidbody;
     [SerializeField] Camera mCam;
     [SerializeField] LayerMask mObstacleMask;
+    [SerializeField] AudioSource mAudioSource;
 
     //External Refs
-
+    [Header("External References")]
+    [Tooltip("found at start, make sure its in the scene")]
+    [SerializeField] AudioManager mAudioManager;
 
     //Variables
     [Header("Character Settings")]
@@ -79,6 +82,7 @@ public class PlayerController : MonoBehaviour
     private void Start()
     {
         InitializePlayer();
+        mAudioManager = FindObjectOfType<AudioManager>();
 
     }
     void InitializePlayer()
@@ -177,17 +181,15 @@ public class PlayerController : MonoBehaviour
             }
         }
     }
+    
     private void Update()
     {
         Look();
-        //CrouchCheck();
     }
     private void FixedUpdate()
     {
         //Movement is processed in fixed updates so it lines up with the physics checks
         Movement();
         CrouchCheck();
-
-
     }
 }
