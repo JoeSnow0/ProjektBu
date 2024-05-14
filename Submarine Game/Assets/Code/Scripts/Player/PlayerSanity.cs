@@ -33,10 +33,10 @@ public class PlayerSanity : MonoBehaviour
     //Function to call to clamp sanity value between min and max values;
     private void ClampSanity(float numberToClamp)
     {
-        Mathf.Clamp(numberToClamp, mMinSanity, mMaxSanity.value);
+        mCurrentSanity.value = Mathf.Clamp(numberToClamp, mMinSanity, mMaxSanity.value);
     }
     //Function to call to increase sanity
-    void addSanity(float amount)
+    public void addSanity(float amount)
     {
         mCurrentSanity.value += amount;
         ClampSanity(mCurrentSanity.value);
