@@ -7,6 +7,7 @@ public class PickUpKey : Pickup
     public Key mKey;
     public override void InteractionTriggered()
     {
+        audioma
         Destroy(gameObject);
     }
 }
