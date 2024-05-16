@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using static Unity.VisualScripting.Member;
 
 public class AudioManager : MonoBehaviour
 {
@@ -14,6 +15,9 @@ public class AudioManager : MonoBehaviour
     [SerializeField] AudioClip[] Music;
     [SerializeField] AudioClip[] SFX;
 
+    float defaultMaxDistance = 10f;
+    AudioType defaultType = AudioType.SFX;
+
     /// <summary>
     /// The Number represents the audio files place in the list of sound effects
     /// </summary>
@@ -25,13 +29,29 @@ public class AudioManager : MonoBehaviour
         source.clip = SFX[number];
         source.spatialBlend = 1f;
         source.maxDistance = maxDistance;
-        if(type == AudioType.SFX)
-        source.volume = SFXVolume.value * MasterVolume.value;
-        else if (type == AudioType.Voice)
-        source.volume = VoiceVolume.value * MasterVolume.value;
-        else if (type == AudioType.Music)
-        source.volume = MusicVolume.value * MasterVolume.value;
+        float volume = SetVolumeToType(type);
+        source.volume = volume;
         source.Play();
     }
-    
+    public void PlaySound(int number, AudioSource source, bool loop)
+    {
+        source.loop = loop;
+        source.clip = SFX[number];
+        source.spatialBlend = 1f;
+        source.maxDistance = defaultMaxDistance;
+        float volume = SetVolumeToType(defaultType);
+        source.volume = volume;
+        source.Play();
+    }
+    private float SetVolumeToType(AudioType type)
+    {
+        float f = 0f;
+        if (defaultType == AudioType.SFX)
+            f = SFXVolume.value * MasterVolume.value;
+        else if (defaultType == AudioType.Voice)
+            f = VoiceVolume.value * MasterVolume.value;
+        else if (defaultType == AudioType.Music)
+            f = MusicVolume.value * MasterVolume.value;
+        return f;
+    }
 }
