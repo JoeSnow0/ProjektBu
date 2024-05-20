@@ -55,7 +55,7 @@ public class ControlPanelCode : ControlPanel
         panelText.color = Color.green;
         if (TargetToUnlock != null)
         {
-            TargetToUnlock.UnlockDoor(true);
+            TargetToUnlock.myObject.UnlockDoor(true);
         }
         else
         {
@@ -68,7 +68,7 @@ public class ControlPanelCode : ControlPanel
         mAudioManager.PlaySound(0, mAudioSource, false);
         if (TargetToUnlock != null)
         {
-            TargetToUnlock.UnlockDoor(false);
+            TargetToUnlock.myObject.UnlockDoor(false);
         }
         else
         {

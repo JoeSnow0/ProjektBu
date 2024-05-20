@@ -4,10 +4,11 @@ using UnityEngine;
 
 public class InteractableLock : Interactable
 {
-
+    [Header("Assign Key and door")]
     [SerializeField] Key requiredKey;
+    public DoorHolder TargetToUnlock;
+    [Header("These should already be assigned")]
     [SerializeField] MeshRenderer[] KeyDisplay;
-    public InteractableObject TargetToUnlock;
 
     private void Start()
     {
@@ -38,7 +39,7 @@ public class InteractableLock : Interactable
                     if (key == requiredKey)
                     {
                         //You found the key, play the animation!
-                        TargetToUnlock.UnlockDoor(true);
+                        TargetToUnlock.myObject.UnlockDoor(true);
                         return;
                     }
 
@@ -49,7 +50,7 @@ public class InteractableLock : Interactable
         }
         if (requiredKey == null)
         {
-            TargetToUnlock.UnlockDoor(true);
+            TargetToUnlock.myObject.UnlockDoor(true);
         }
     }
 }

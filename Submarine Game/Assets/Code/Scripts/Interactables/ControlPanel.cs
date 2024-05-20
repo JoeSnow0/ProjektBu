@@ -12,8 +12,9 @@ public abstract class ControlPanel : MonoBehaviour
 {
     public AudioManager mAudioManager;
     public AudioSource mAudioSource;
-    public InteractableObject TargetToUnlock;
-    public bool panelDone = false;
+    [Header("Assign this to a door you want unlocked")]
+    public DoorHolder TargetToUnlock;
+    [HideInInspector] public bool panelDone = false;
     private void Start()
     {
         mAudioManager = FindObjectOfType<AudioManager>();

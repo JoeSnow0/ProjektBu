@@ -396,10 +396,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a73c376c71e7e4540ac87b03006964ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mItemName: 1
   mAudioManager: {fileID: 0}
   mAudioSource: {fileID: 0}
-  panel: {fileID: 0}
+  mItemName: 1
+  panel: {fileID: 7872948239763064092}
   number: 49
   textMesh: {fileID: 7745683831579382271}
 --- !u!82 &4392717788825614921
@@ -669,6 +669,111 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_renderer: {fileID: 7448216875227694722}
   m_maskType: 0
+--- !u!1 &1243300965871439492
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6841601347827239310}
+  - component: {fileID: 7635373914756837707}
+  - component: {fileID: 5828407534503921070}
+  - component: {fileID: 7429866878412833294}
+  m_Layer: 0
+  m_Name: ScreenEdge
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6841601347827239310
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1243300965871439492}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.95, y: 1.1111112, z: 1.1111112}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 7817952594354235027}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!33 &7635373914756837707
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1243300965871439492}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!23 &5828407534503921070
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1243300965871439492}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: -8619575885325641298, guid: 2ff6d3ee84e50ee4abcda5c5814fe5c7, type: 3}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &7429866878412833294
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1243300965871439492}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1624191338817900072
 GameObject:
   m_ObjectHideFlags: 0
@@ -1473,10 +1578,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a73c376c71e7e4540ac87b03006964ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mItemName: 9
   mAudioManager: {fileID: 0}
   mAudioSource: {fileID: 0}
-  panel: {fileID: 0}
+  mItemName: 9
+  panel: {fileID: 7872948239763064092}
   number: 57
   textMesh: {fileID: 2435008005312980489}
 --- !u!82 &1687706932693101326
@@ -1695,10 +1800,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a73c376c71e7e4540ac87b03006964ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mItemName: 8
   mAudioManager: {fileID: 0}
   mAudioSource: {fileID: 0}
-  panel: {fileID: 0}
+  mItemName: 8
+  panel: {fileID: 7872948239763064092}
   number: 56
   textMesh: {fileID: 5209971896393447931}
 --- !u!82 &9091101877342119925
@@ -1917,10 +2022,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a73c376c71e7e4540ac87b03006964ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mItemName: 3
   mAudioManager: {fileID: 0}
   mAudioSource: {fileID: 0}
-  panel: {fileID: 0}
+  mItemName: 3
+  panel: {fileID: 7872948239763064092}
   number: 51
   textMesh: {fileID: 8620632224426566046}
 --- !u!82 &477881191876316754
@@ -2139,10 +2244,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a73c376c71e7e4540ac87b03006964ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mItemName: 2
   mAudioManager: {fileID: 0}
   mAudioSource: {fileID: 0}
-  panel: {fileID: 0}
+  mItemName: 2
+  panel: {fileID: 7872948239763064092}
   number: 50
   textMesh: {fileID: 3262291427148224429}
 --- !u!82 &6076102011753088518
@@ -2270,10 +2375,11 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 1.5, z: 0}
-  m_LocalScale: {x: 0.2, y: 1, z: 1}
+  m_LocalScale: {x: 0.2, y: 0.9, z: 0.9}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 8530859202701669184}
+  - {fileID: 6841601347827239310}
   m_Father: {fileID: 8344537852229785019}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &3282582793337913769
@@ -2638,10 +2744,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a73c376c71e7e4540ac87b03006964ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mItemName: 7
   mAudioManager: {fileID: 0}
   mAudioSource: {fileID: 0}
-  panel: {fileID: 0}
+  mItemName: 7
+  panel: {fileID: 7872948239763064092}
   number: 55
   textMesh: {fileID: 4623254827018142486}
 --- !u!82 &8580326100932779779
@@ -2860,10 +2966,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a73c376c71e7e4540ac87b03006964ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mItemName: 6
   mAudioManager: {fileID: 0}
   mAudioSource: {fileID: 0}
-  panel: {fileID: 0}
+  mItemName: 6
+  panel: {fileID: 7872948239763064092}
   number: 54
   textMesh: {fileID: 4827695151258043050}
 --- !u!82 &4782007250096829435
@@ -2972,6 +3078,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8344537852229785019}
   - component: {fileID: 3220989757528942659}
+  - component: {fileID: 7872948239763064092}
   m_Layer: 0
   m_Name: CodePanel
   m_TagString: Untagged
@@ -3102,6 +3209,24 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &7872948239763064092
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6965374451042133273}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0929e1fa505718748bfbab49b2bade89, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mAudioManager: {fileID: 0}
+  mAudioSource: {fileID: 0}
+  TargetToUnlock: {fileID: 0}
+  panelDone: 0
+  panelText: {fileID: 2715628097931069654}
+  CorrectCode: 1
 --- !u!1 &7304655530253073111
 GameObject:
   m_ObjectHideFlags: 0
@@ -3564,10 +3689,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a73c376c71e7e4540ac87b03006964ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mItemName: 5
   mAudioManager: {fileID: 0}
   mAudioSource: {fileID: 0}
-  panel: {fileID: 0}
+  mItemName: 5
+  panel: {fileID: 7872948239763064092}
   number: 53
   textMesh: {fileID: 8005930878333766940}
 --- !u!82 &698098732673069859
@@ -3786,10 +3911,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a73c376c71e7e4540ac87b03006964ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mItemName: 4
   mAudioManager: {fileID: 0}
   mAudioSource: {fileID: 0}
-  panel: {fileID: 0}
+  mItemName: 4
+  panel: {fileID: 7872948239763064092}
   number: 52
   textMesh: {fileID: 6150603882014295989}
 --- !u!82 &4762893861797230214
@@ -3987,7 +4112,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 
+  m_text: '
+
+'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -4014,14 +4141,14 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
-  m_fontSizeBase: 36
+  m_fontSize: 4
+  m_fontSizeBase: 4
   m_fontWeight: 400
-  m_enableAutoSizing: 1
+  m_enableAutoSizing: 0
   m_fontSizeMin: 0
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_HorizontalAlignment: 2
+  m_HorizontalAlignment: 1
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
@@ -4350,10 +4477,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a73c376c71e7e4540ac87b03006964ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mItemName: 0
   mAudioManager: {fileID: 0}
   mAudioSource: {fileID: 0}
-  panel: {fileID: 0}
+  mItemName: 0
+  panel: {fileID: 7872948239763064092}
   number: 48
   textMesh: {fileID: 5197360963973331865}
 --- !u!82 &6233222031398621458
