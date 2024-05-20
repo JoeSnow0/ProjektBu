@@ -7,14 +7,13 @@ using UnityEngine;
 public class InteractableObject : Interactable
 {
     [Header("Door References")]
-    [Tooltip("Assign before start")]
     [SerializeField] MeshRenderer DoorFrame;
     [SerializeField] float animationSpeed = 1f;
     [SerializeField] Animator mAnim;
     [Header("Door State")]
-    [Tooltip("Toggle if you want the door to be unlocked at start")]
+    [Tooltip("Toggle if you want the door to be unlocked at start, if the door isn't attached to a panel of somekind it should probably be unlocked")]
     public bool unlocked;
-    bool isPlaying = false;
+    private bool isPlaying = false;
     AnimatorStateInfo animStateInfo;
     private float NormalizedTime;
     private void Start()
