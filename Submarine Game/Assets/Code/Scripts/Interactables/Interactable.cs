@@ -1,11 +1,20 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine;
 
+[RequireComponent(typeof(AudioSource))]
 public abstract class Interactable : MonoBehaviour
 {
+    public AudioManager mAudioManager;
+    public AudioSource mAudioSource;
     //All Interactables have a name
     public string mItemName;
-    //And an activation function
+
+    private void Start()
+    {
+        mAudioManager = FindObjectOfType<AudioManager>();
+        mAudioSource = GetComponent<AudioSource>();
+    }
     public abstract void InteractionTriggered();
 }
