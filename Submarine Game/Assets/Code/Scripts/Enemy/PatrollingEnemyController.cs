@@ -19,6 +19,7 @@ public class PatrollingEnemyController : EnemyController
 
         mAudioManager = FindObjectOfType<AudioManager>();
         mAudioManager.PlaySound(1, mAudioSource, true);
+        mAudioManager.PlaySound(1, mAudioSource, true, AudioManager.AudioType.SFX, 10f);
     }
     private void Update()
     {

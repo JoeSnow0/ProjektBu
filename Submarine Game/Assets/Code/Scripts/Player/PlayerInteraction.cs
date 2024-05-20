@@ -7,8 +7,6 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.UI;
 
-[RequireComponent(typeof(AudioSource))]
-
 
 public class PlayerInteraction : MonoBehaviour
 {
@@ -18,8 +16,6 @@ public class PlayerInteraction : MonoBehaviour
     public List<Key> myKeys =  new List<Key>();
     [SerializeField] float maxDistance;
     [SerializeField] LayerMask interactableMask;
-    [SerializeField] AudioSource mAudioSource;
-    AudioManager mAudioManager;
     Vector3 origin;
     Vector3 direction;
     bool mInteractInput;
@@ -28,8 +24,6 @@ public class PlayerInteraction : MonoBehaviour
 
     private void Start()
     {
-        mAudioSource = GetComponent<AudioSource>();
-        mAudioManager = FindAnyObjectByType<AudioManager>();
         if (mPlayerUI == null)
         {
             mPlayerUI = FindObjectOfType<PlayerUIController>();
@@ -69,41 +63,45 @@ public class PlayerInteraction : MonoBehaviour
             RaycastHit hit = CheckInteractable();
             if (hit.collider != null)
             {
-                if(hit.transform.GetComponent<InteractableNamedItem>() != null)
-                {
-
-                }
-                //Check for notes
-                if (hit.transform.GetComponent<InteractableNotes>() != null)
-                {
-                    //Grab the text
-                    string text = hit.transform.gameObject.GetComponent<InteractableNotes>().myText.text;
-                    if (text != null)
-                    {
-                        mPlayerUI.NotesText.text = text;
-                    }
-                    else
-                    {
-                        mPlayerUI.NotesText.text = "Missing text file";
-                    }
-                    mPlayerUI.NotesPanel.gameObject.SetActive(true);
-                }
-                else
-                {
-                    mPlayerUI.NotesPanel.gameObject.SetActive(false);
-                }
-                //check for pickups
-                if (hit.transform.GetComponent<PickUpKey>() != null)
-                {
-                    //add key to player
-                    myKeys.Add(hit.transform.GetComponent<PickUpKey>().mKey);
-                    mAudioManager.PlaySound(0, mAudioSource, false);
-
-                }
-                if ((interactableMask & (1 << hit.transform.gameObject.layer)) != 0)
+                if(hit.transform.GetComponent<Interactable>() != null)
                 {
                     hit.transform.GetComponent<Interactable>().InteractionTriggered();
                 }
+
+            //    if (hit.transform.GetComponent<InteractableNamedItem>() != null)
+            //    {
+
+            //    }
+            //    //Check for notes
+            //    if (hit.transform.GetComponent<InteractableNotes>() != null)
+            //    {
+            //        //Grab the text
+            //        string text = hit.transform.gameObject.GetComponent<InteractableNotes>().myText.text;
+            //        if (text != null)
+            //        {
+            //            mPlayerUI.NotesText.text = text;
+            //        }
+            //        else
+            //        {
+            //            mPlayerUI.NotesText.text = "Missing text file";
+            //        }
+            //        mPlayerUI.NotesPanel.gameObject.SetActive(true);
+            //    }
+            //    else
+            //    {
+            //        mPlayerUI.NotesPanel.gameObject.SetActive(false);
+            //    }
+            //    //check for pickups
+            //    if (hit.transform.GetComponent<PickUpKey>() != null)
+            //    {
+            //        //add key to player
+            //        myKeys.Add(hit.transform.GetComponent<PickUpKey>().mKey);
+
+            //    }
+            //    if ((interactableMask & (1 << hit.transform.gameObject.layer)) != 0)
+            //    {
+            //        hit.transform.GetComponent<Interactable>().InteractionTriggered();
+            //    }
             }
         }
     }
@@ -136,5 +134,9 @@ public class PlayerInteraction : MonoBehaviour
     {
         //reset the interact input, this prevents the player from constantly triggering the door animation(or other interactable animation)
         mInteractInput = false;
+    }
+    public void AddKey(Key newKey)
+    {
+        myKeys.Add(newKey);
     }
 }

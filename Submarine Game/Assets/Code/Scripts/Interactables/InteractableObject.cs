@@ -6,22 +6,22 @@ using UnityEngine;
 
 public class InteractableObject : Interactable
 {
+    [Header("Door References")]
+    [SerializeField] MeshRenderer DoorFrame;
     [SerializeField] float animationSpeed = 1f;
     [SerializeField] Animator mAnim;
-    //bool opened = false;
-    [SerializeField] Key requiredKey;
-    bool isPlaying = false;
+    [Header("Door State")]
+    [Tooltip("Toggle if you want the door to be unlocked at start, if the door isn't attached to a panel of somekind it should probably be unlocked")]
+    public bool unlocked;
+    private bool isPlaying = false;
     AnimatorStateInfo animStateInfo;
-    public float NormalizedTime;
-    [SerializeField] MeshRenderer[] KeyDisplay;
+    private float NormalizedTime;
     private void Start()
     {
-        if(requiredKey != null)
+        DoorFrame.material.color = Color.red;
+        if (unlocked)
         {
-            foreach(var key in KeyDisplay)
-            {
-                key.material = requiredKey.KeyMaterial;
-            }
+            DoorFrame.material.color = Color.green;
         }
     }
     private void Update()
@@ -43,48 +43,58 @@ public class InteractableObject : Interactable
             isPlaying = false;
         }
     }
-public override void InteractionTriggered()
+    /// <summary>
+    /// Triggers when the player interacts with the object
+    /// </summary>
+    public override void InteractionTriggered()
     {
-        KeyCheck();
-    }
-    private void KeyCheck()
-    {
-        if(requiredKey != null)
+        if (isPlaying! && unlocked && mAnim.GetBool("Opened"))
         {
-            //Get keys from player in scene
-            List<Key> checkKeys = FindAnyObjectByType<PlayerInteraction>().myKeys;
-            //Make the player has any keys at all
-            if (checkKeys != null)
-            {
-                //Check for correct key
-                foreach (Key key in checkKeys)
-                {
-                    if (key == requiredKey)
-                    {
-                        //You found the key, play the animation!
-                        TriggerAnimation();
-                        return;
-                    }
+            OpenDoor(false);
+        }
+        else if (isPlaying! && unlocked && !mAnim.GetBool("Opened"))
+        {
+            OpenDoor(true);
+        }
+    }
+    /// <summary>
+    /// Open or close the door based on input
+    /// </summary>
+    public void OpenDoor(bool state)
+    {
+        if (isPlaying! && unlocked)
+        {
+            TriggerAnimation(state);
+        }
+    } 
+    /// <summary>
+    /// Unlock the door so it can be opened and closed
+    /// </summary>
+    public void UnlockDoor(bool state)
+    {
+        unlocked = state;
+        Debug.Log("Door is unlocked");
+        if(state)
+        {
+            DoorFrame.material.color = Color.green;
+        }
+        else
+        {
+            DoorFrame.material.color = Color.red;
+        }
+    }
+    /// <summary>
+    /// switches between the open and close animation
+    /// </summary>
+    /// <param name="state"></param>
+    private void TriggerAnimation(bool state)
+    {
 
-                }
-                //If you don't have the key do this
-                Debug.Log("You are missing a key");
-            }
-        }
-        if(requiredKey == null)
-        {
-            TriggerAnimation();
-        }
+        //Flips the bool which should trigger the animation to play
+        mAnim.SetBool("Opened", state);
+        isPlaying = true;
+        mAnim.speed = animationSpeed;
+
     }
-    private void TriggerAnimation()
-    {
-        if (isPlaying!)
-        {
-            //Flips the bool which should trigger the animation to play
-            mAnim.SetBool("Opened", !mAnim.GetBool("Opened"));
-            isPlaying = true;
-            mAnim.speed = animationSpeed;
-        }
-    }
-    
+
 }

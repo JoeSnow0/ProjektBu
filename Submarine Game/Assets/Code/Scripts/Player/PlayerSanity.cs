@@ -6,6 +6,7 @@ using UnityEngine.UI;
 
 public class PlayerSanity : MonoBehaviour
 {
+    [Header("Sanity")]
     [SerializeField] FloatReference mCurrentSanity; 
     [SerializeField] FloatReference mMaxSanity;
     float mMinSanity = 0;
