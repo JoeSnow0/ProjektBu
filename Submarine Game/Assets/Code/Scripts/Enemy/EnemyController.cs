@@ -16,6 +16,7 @@ public abstract class EnemyController : MonoBehaviour
     public Transform raycastOrigin;
     public TriggerChecker playerChecker;
     public AudioSource mAudioSource;
+    public ParticleSystem mParticleSystem;
 
     //External Refs
     [Header("External References")]

@@ -8,6 +8,7 @@ public class PickUpKey : Pickup
     public override void InteractionTriggered()
     {
         FindObjectOfType<PlayerInteraction>().AddKey(mKey);
+        TriggerStaticEnemy();
         Destroy(gameObject);
     }
 }
