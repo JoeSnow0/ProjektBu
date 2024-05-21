@@ -5,9 +5,19 @@ using UnityEngine;
 public class Pickup : Interactable
 {
     public Keys key;
+    public StaticEnemyController[] controller;
+
     public override void InteractionTriggered()
     {
-        Debug.Log("You have picked up an item");
-        Destroy(gameObject);
+    }
+    public void TriggerStaticEnemy()
+    {
+        if (controller != null)
+        {
+            foreach (var enemy in controller) 
+            {
+                enemy.ActivateEnemy();
+            }
+        }
     }
 }

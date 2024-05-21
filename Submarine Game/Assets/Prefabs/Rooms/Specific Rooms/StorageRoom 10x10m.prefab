@@ -1868,16 +1868,176 @@ PrefabInstance:
       propertyPath: m_Name
       value: Capsule Container
       objectReference: {fileID: 0}
+    - target: {fileID: 2223331143903484386, guid: 7ba5b0c17fde5084db54c627fa872f88, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 91284d60fd893604382a92d99d61f04d, type: 2}
+    - target: {fileID: 2861254814324252823, guid: 7ba5b0c17fde5084db54c627fa872f88, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.212
+      objectReference: {fileID: 0}
+    - target: {fileID: 2861254814324252823, guid: 7ba5b0c17fde5084db54c627fa872f88, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.668
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 9053753198348370818, guid: 7ba5b0c17fde5084db54c627fa872f88, type: 3}
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 3242284643845421613, guid: 7ba5b0c17fde5084db54c627fa872f88, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 6173351551406050298}
+    - targetCorrespondingSourceObject: {fileID: 3242284643845421613, guid: 7ba5b0c17fde5084db54c627fa872f88, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 5690862644598796884}
+    - targetCorrespondingSourceObject: {fileID: 3242284643845421613, guid: 7ba5b0c17fde5084db54c627fa872f88, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 5739717186007202845}
   m_SourcePrefab: {fileID: 100100000, guid: 7ba5b0c17fde5084db54c627fa872f88, type: 3}
 --- !u!4 &647126077956434180 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 962955640265426182, guid: 7ba5b0c17fde5084db54c627fa872f88, type: 3}
   m_PrefabInstance: {fileID: 407037764866337794}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &2979410447714407983 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3242284643845421613, guid: 7ba5b0c17fde5084db54c627fa872f88, type: 3}
+  m_PrefabInstance: {fileID: 407037764866337794}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &6173351551406050298
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2979410447714407983}
+  m_Material: {fileID: 13400000, guid: 4e573772ad6b18f4db98988ebf3134fd, type: 2}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.023891253, y: 0.022179494, z: 0.023995383}
+  m_Center: {x: -0.00000012014061, y: 4.656614e-10, z: 0.0019976916}
+--- !u!114 &5690862644598796884
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2979410447714407983}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee47db4413ef0b34797caef8de150aab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mAudioManager: {fileID: 0}
+  mAudioSource: {fileID: 0}
+  mItemName: Kill Alien
+  LevelName: EndScene
+--- !u!82 &5739717186007202845
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2979410447714407983}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1001 &409893963687408385
 PrefabInstance:
   m_ObjectHideFlags: 0

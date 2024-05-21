@@ -1,9 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class ControlPanelTimer : ControlPanel
 {
+    [SerializeField] TextMeshPro timerDisplayText;
     float timerCurrent = 0f;
     [Header("Timer")]
     [Tooltip("Set the amount of time the door remains open")]
@@ -20,20 +22,16 @@ public class ControlPanelTimer : ControlPanel
     void TimerCount()
     {
         timerCurrent += Time.deltaTime;
+        float time = timerLength - timerCurrent;
+        timerDisplayText.text = time.ToString();
     }
     void TimerDone()
     {
         TargetToUnlock.myObject.OpenDoor(false);
         TargetToUnlock.myObject.UnlockDoor(false);
         timerOn = false;
+        timerDisplayText.text = "0.00";
     }
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
     void Update()
     {
         if(timerOn)

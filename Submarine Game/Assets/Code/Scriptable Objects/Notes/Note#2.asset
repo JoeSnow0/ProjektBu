@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2853ffee04193004795b9f3d21200205, type: 3}
   m_Name: Note#2
   m_EditorClassIdentifier: 
-  text: Buu
+  text: Code is 1234
