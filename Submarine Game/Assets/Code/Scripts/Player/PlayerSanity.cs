@@ -52,7 +52,7 @@ public class PlayerSanity : MonoBehaviour
     void Death()
     {
         Cursor.lockState = CursorLockMode.None;
-        SceneManager.LoadScene("EndScene");
+        SceneManager.LoadScene("DeathScene");
     }
     private void Update()
     {

@@ -5452,7 +5452,7 @@ CapsuleCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 3.3
-  m_Height: 7.6
+  m_Height: 10
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!95 &5754498189542933474
@@ -5704,3 +5704,4 @@ MonoBehaviour:
   mStates: []
   mCurrentState: 2
   animator: {fileID: 5754498189542933474}
+  isActive: 0
