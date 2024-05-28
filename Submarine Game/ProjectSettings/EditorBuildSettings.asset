@@ -20,5 +20,11 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/DeathScene.unity
     guid: d3fad1c56acc9424eae7c421a64594e1
+  - enabled: 1
+    path: Assets/Scenes/Testing2 With Rockets.unity
+    guid: 360cf29dc90437d47a5a2f6e401b7739
+  - enabled: 1
+    path: Assets/Scenes/Testing 3YetMoreTests.unity
+    guid: cffbed09371a60243960aaa7ed3027c2
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: 080e9fe6a1caae5419cd271269b9112d, type: 2}
