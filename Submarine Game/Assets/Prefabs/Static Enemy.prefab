@@ -43,7 +43,7 @@ ParticleSystem:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1669494160429414873}
   serializedVersion: 8
-  lengthInSec: 10
+  lengthInSec: 5
   simulationSpeed: 1
   stopAction: 0
   cullingMode: 0
@@ -118,7 +118,7 @@ ParticleSystem:
     startLifetime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 15
+      scalar: 25
       minScalar: 5
       maxCurve:
         serializedVersion: 2
@@ -4969,7 +4969,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 267598478575235725}
-  - component: {fileID: 8056584417684288319}
   - component: {fileID: 4632902191702736602}
   - component: {fileID: 5131918854285784761}
   m_Layer: 0
@@ -4995,14 +4994,6 @@ Transform:
   - {fileID: 152432739382376322}
   m_Father: {fileID: 6441706036336508538}
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
---- !u!33 &8056584417684288319
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3177356651981074919}
-  m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!95 &4632902191702736602
 Animator:
   serializedVersion: 5
@@ -5329,7 +5320,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &588147544245209753
 Transform:
   m_ObjectHideFlags: 0
@@ -5492,7 +5483,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &3041079939197957790
 Transform:
   m_ObjectHideFlags: 0
