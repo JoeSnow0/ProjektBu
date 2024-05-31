@@ -265,7 +265,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mCam: {fileID: 8647036892413363336}
   myKeys: []
-  maxDistance: 1
+  maxDistance: 1.5
   interactableMask:
     serializedVersion: 2
     m_Bits: 64

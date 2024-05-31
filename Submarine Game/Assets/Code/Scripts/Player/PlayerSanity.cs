@@ -14,6 +14,7 @@ public class PlayerSanity : MonoBehaviour
     [SerializeField] LayerMask mSanityDrainMask;
     [SerializeField] float defaultDrainAmount = 5f;
     [SerializeField] bool canDie = true;
+    public bool BeingDrained = false;
     [SerializeField] PlayerUIController mPlayerUIPrefab;
     [SerializeField] PlayerUIController mPlayerUI;
 
@@ -66,10 +67,21 @@ public class PlayerSanity : MonoBehaviour
     {
         if (mTriggerChecker.isInTrigger)
         {
-            if ((mSanityDrainMask & (1 << mTriggerChecker.GetColliderOfTarget().gameObject.layer)) != 0)
+            if((mSanityDrainMask & (1 << mTriggerChecker.GetColliderOfTarget().gameObject.layer)) != 0)
             {
                 SubtractSanity(defaultDrainAmount * Time.deltaTime);
-            } 
+                BeingDrained = true;
+
+            }
+            else
+            {
+                BeingDrained = false;
+            }
+        }
+        else if(!mTriggerChecker.isInTrigger)
+        {
+
+            BeingDrained = false;
         }
     }
 }
