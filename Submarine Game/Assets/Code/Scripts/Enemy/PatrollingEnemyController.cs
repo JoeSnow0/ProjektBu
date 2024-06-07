@@ -6,6 +6,7 @@ using UnityEngine;
 using UnityEngine.AI;
 
 [RequireComponent(typeof(Patrol))]
+[RequireComponent(typeof(AudioSource))]
 
 public class PatrollingEnemyController : EnemyController
 {
@@ -15,11 +16,16 @@ public class PatrollingEnemyController : EnemyController
     {
         //mStates[0] is the default state
         mStates = GetComponents<EnemyStates>();
-        mCurrentState = mStates[0].mState;
+        SetState(mStates[0].mState);
 
         mAudioManager = FindObjectOfType<AudioManager>();
+        mAudioSource = GetComponent<AudioSource>();
         mAudioManager.PlaySound(1, mAudioSource, true);
         mAudioManager.PlaySound(1, mAudioSource, true, AudioManager.AudioType.SFX, 10f);
+        if(!mNavMeshAgent.isOnNavMesh)
+        {
+            SetState(EnemyState.disabled);
+        }
     }
     private void Update()
     {

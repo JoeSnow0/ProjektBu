@@ -3166,6 +3166,14 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5263202041110357618, guid: c7281f6149ee4114bb9d3d37ab4308a0, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7009860615505605322, guid: c7281f6149ee4114bb9d3d37ab4308a0, type: 3}
+      propertyPath: InitialModule.startSize.scalar
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 8507029190763129594, guid: c7281f6149ee4114bb9d3d37ab4308a0, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -3480,7 +3488,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2210169309817183644, guid: 13d63d98cc81e0f41b2dd5a1f7f4934c, type: 3}
       propertyPath: timerLength
-      value: 11
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 2210169309817183644, guid: 13d63d98cc81e0f41b2dd5a1f7f4934c, type: 3}
       propertyPath: TargetToUnlock

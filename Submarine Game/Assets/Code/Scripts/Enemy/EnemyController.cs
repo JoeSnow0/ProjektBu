@@ -8,7 +8,7 @@ using UnityEngine.UI;
 public abstract class EnemyController : MonoBehaviour
 {
     //Internal Refs
-    [Header("Player References")]
+    [Header("Internal References")]
     [Tooltip("Internal References (assigned before start)")]
     public LayerMask playerMask;
     public LayerMask obstacleMask;
@@ -17,6 +17,7 @@ public abstract class EnemyController : MonoBehaviour
     public TriggerChecker playerChecker;
     public AudioSource mAudioSource;
     public ParticleSystem mParticleSystem;
+    public NavMeshAgent mNavMeshAgent;
 
     //External Refs
     [Header("External References")]
@@ -26,7 +27,7 @@ public abstract class EnemyController : MonoBehaviour
 
 
     public bool IsTargetSeen = false;
-    public enum EnemyState { Patrol, Chase, Freeze };
+    public enum EnemyState { Patrol, Chase, Freeze, disabled };
     public EnemyStates[] mStates;
     public EnemyState mCurrentState;
 
