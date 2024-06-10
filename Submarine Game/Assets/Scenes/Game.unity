@@ -20,17 +20,17 @@ RenderSettings:
   m_FogDensity: 0.01
   m_LinearFogStart: 0
   m_LinearFogEnd: 300
-  m_AmbientSkyColor: {r: 0.212, g: 0.227, b: 0.259, a: 1}
+  m_AmbientSkyColor: {r: 0.04338732, g: 0.044648148, b: 0.047169805, a: 1}
   m_AmbientEquatorColor: {r: 0.114, g: 0.125, b: 0.133, a: 1}
   m_AmbientGroundColor: {r: 0.047, g: 0.043, b: 0.035, a: 1}
   m_AmbientIntensity: 1
-  m_AmbientMode: 0
+  m_AmbientMode: 3
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
   m_SkyboxMaterial: {fileID: 10304, guid: 0000000000000000f000000000000000, type: 0}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
-  m_HaloTexture: {fileID: 0}
+  m_HaloTexture: {fileID: 2800000, guid: d81094cece85e1744af41293cf2adc31, type: 3}
   m_SpotCookie: {fileID: 10001, guid: 0000000000000000e000000000000000, type: 0}
   m_DefaultReflectionMode: 0
   m_DefaultReflectionResolution: 128
@@ -455,11 +455,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3780198271213139049, guid: b7cd30bdb1307cc4e9b3885eb36edb4b, type: 3}
       propertyPath: m_text
-      value: Science Lab #1
+      value: Office
       objectReference: {fileID: 0}
     - target: {fileID: 3780198271213139049, guid: b7cd30bdb1307cc4e9b3885eb36edb4b, type: 3}
       propertyPath: m_fontSize
-      value: 3.85
+      value: 7.75
       objectReference: {fileID: 0}
     - target: {fileID: 3780198271213139049, guid: b7cd30bdb1307cc4e9b3885eb36edb4b, type: 3}
       propertyPath: m_margin.y
@@ -904,6 +904,10 @@ PrefabInstance:
     - target: {fileID: 5757602276937543807, guid: 4dc5f033d7b90ef4cb2cfde39bc2b340, type: 3}
       propertyPath: m_Name
       value: Door
+      objectReference: {fileID: 0}
+    - target: {fileID: 7297757218902099126, guid: 4dc5f033d7b90ef4cb2cfde39bc2b340, type: 3}
+      propertyPath: m_ReceiveShadows
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2531,6 +2535,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Science Room 10x10m
       objectReference: {fileID: 0}
+    - target: {fileID: 4897366145578316894, guid: 7f9957bc285cc964fadc000125454041, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.13
+      objectReference: {fileID: 0}
+    - target: {fileID: 4897366145578316894, guid: 7f9957bc285cc964fadc000125454041, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.34
+      objectReference: {fileID: 0}
     - target: {fileID: 6494314552000654361, guid: 7f9957bc285cc964fadc000125454041, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -3004,18 +3016,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: LabRoom 10x10m
       objectReference: {fileID: 0}
-    - target: {fileID: 2578224416224079801, guid: 773842fef564adf4495ac41506d6fa1b, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2578224416224079801, guid: 773842fef564adf4495ac41506d6fa1b, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2578224416224079801, guid: 773842fef564adf4495ac41506d6fa1b, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0.6000061
-      objectReference: {fileID: 0}
     - target: {fileID: 6494314552000654361, guid: 773842fef564adf4495ac41506d6fa1b, type: 3}
       propertyPath: m_LocalPosition.x
       value: 13.499998
@@ -3055,30 +3055,6 @@ PrefabInstance:
     - target: {fileID: 6494314552000654361, guid: 773842fef564adf4495ac41506d6fa1b, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6889117260404070405, guid: 773842fef564adf4495ac41506d6fa1b, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 6889117260404070405, guid: 773842fef564adf4495ac41506d6fa1b, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6889117260404070405, guid: 773842fef564adf4495ac41506d6fa1b, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0.6000061
-      objectReference: {fileID: 0}
-    - target: {fileID: 8576307397591452407, guid: 773842fef564adf4495ac41506d6fa1b, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 8576307397591452407, guid: 773842fef564adf4495ac41506d6fa1b, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8576307397591452407, guid: 773842fef564adf4495ac41506d6fa1b, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0.6000061
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3389,11 +3365,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1195032454458625865, guid: 54edcc2d51aa2d14f8693a69126f27af, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.952
+      value: 1.01
       objectReference: {fileID: 0}
     - target: {fileID: 1195032454458625865, guid: 54edcc2d51aa2d14f8693a69126f27af, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -15.74
+      value: -15.12
       objectReference: {fileID: 0}
     - target: {fileID: 1195032454458625865, guid: 54edcc2d51aa2d14f8693a69126f27af, type: 3}
       propertyPath: m_LocalRotation.w
@@ -4555,11 +4531,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3780198271213139049, guid: b7cd30bdb1307cc4e9b3885eb36edb4b, type: 3}
       propertyPath: m_text
-      value: Conference Room
+      value: Main Lab
       objectReference: {fileID: 0}
     - target: {fileID: 3780198271213139049, guid: b7cd30bdb1307cc4e9b3885eb36edb4b, type: 3}
       propertyPath: m_fontSize
-      value: 4.25
+      value: 7.75
       objectReference: {fileID: 0}
     - target: {fileID: 3780198271213139049, guid: b7cd30bdb1307cc4e9b3885eb36edb4b, type: 3}
       propertyPath: m_fontSizeMin
