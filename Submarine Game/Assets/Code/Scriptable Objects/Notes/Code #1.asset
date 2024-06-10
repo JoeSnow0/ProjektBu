@@ -10,6 +10,6 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2853ffee04193004795b9f3d21200205, type: 3}
-  m_Name: Note#2
+  m_Name: Code #1
   m_EditorClassIdentifier: 
-  text: Code is 1234
+  text: 1
