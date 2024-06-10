@@ -6,7 +6,7 @@ using UnityEngine;
 public class Key : ScriptableObject
 {
     public string KeyName;
-    public bool aquiredOrRequired;
     //public Color KeyColor;
     public Material KeyMaterial;
+
 }

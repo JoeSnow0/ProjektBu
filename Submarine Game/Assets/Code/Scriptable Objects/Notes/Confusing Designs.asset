@@ -10,7 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2853ffee04193004795b9f3d21200205, type: 3}
-  m_Name: Code #1
+  m_Name: Confusing Designs
   m_EditorClassIdentifier: 
-  text: "Reminder: \n\nThe code to the dining hall's security room is 3941.\nKeep
-    this somewhere safe and not just where anyone can find it!\n\n//Admin Burr"
+  text: 'Is the security room in second B supposed to be a maze? I don''t recall
+    it being that way when I got here and what''s with the timer? is this a test?
+    am I the rat in the maze, looking for cheese? AM I THE EXPERIMENT?!
+
+
+
+    //
+    T'

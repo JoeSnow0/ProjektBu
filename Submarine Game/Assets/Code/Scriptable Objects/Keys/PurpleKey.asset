@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: PurpleKey
   m_EditorClassIdentifier: 
   KeyName: Purple Key
-  aquiredOrRequired: 0
+  KeyColor: {r: 0.66421795, g: 0, b: 1, a: 0}
   KeyMaterial: {fileID: 2100000, guid: 165d1cd6300f8e840b9aed45f46ddaa7, type: 2}

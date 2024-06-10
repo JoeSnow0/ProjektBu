@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Pickup : Interactable
 {
-    public Keys key;
+    [Header("Assign enemies to spawn when item is picked up, or leave blank")]
     public StaticEnemyController[] controller;
 
     public override void InteractionTriggered()

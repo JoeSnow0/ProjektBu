@@ -12,4 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2853ffee04193004795b9f3d21200205, type: 3}
   m_Name: The Existence Of the Extraterrestrial
   m_EditorClassIdentifier: 
-  text: 1234
+  text: "Few of us would've believed it possible if it hadn't been so readily presented
+    to us, clearing all doubt from our minds in but an instant. The Deep Sea #5 has
+    served us well. We've been able to take a closer look at the impact location
+    aswell as perform our tests in peace and quiet, away from prying eyes. Although
+    I'd be remiss if I didn't mention the bouts of claustrophobia that this place
+    seems to instill in each and everyone of us. We're managing it through medication
+    and so far everyone seems to be doing alright. \n\n//Science Officer Guy Derring"
