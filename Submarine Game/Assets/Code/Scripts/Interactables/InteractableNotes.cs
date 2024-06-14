@@ -10,6 +10,7 @@ public class InteractableNotes : Interactable
     private void Start()
     {
         mPlayerUI = FindObjectOfType<PlayerUIController>();
+        mItemName = myText.name;
     }
     public override void InteractionTriggered()
     {
