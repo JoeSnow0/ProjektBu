@@ -9,6 +9,8 @@ public class InteractableLock : Interactable
     public DoorHolder TargetToUnlock;
     [Header("These should already be assigned")]
     [SerializeField] MeshRenderer[] KeyDisplay;
+    [SerializeField] Light mLight;
+    [SerializeField] MeshRenderer mLightbulb;
 
     private void Start()
     {
@@ -39,7 +41,7 @@ public class InteractableLock : Interactable
                     if (key == requiredKey)
                     {
                         //You found the key, play the animation!
-                        TargetToUnlock.myObject.UnlockDoor(true);
+                        Unlock();
                         return;
                     }
 
@@ -50,7 +52,13 @@ public class InteractableLock : Interactable
         }
         if (requiredKey == null)
         {
-            TargetToUnlock.myObject.UnlockDoor(true);
+            Unlock();
         }
+    }
+    private void Unlock()
+    {
+        TargetToUnlock.myObject.UnlockDoor(true);
+        mLight.color = Color.green;
+        mLightbulb.material.SetColor("_EmissionColor", Color.green);
     }
 }

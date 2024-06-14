@@ -851,17 +851,25 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 389690126620984250, guid: accf4ca284393b041a4b519e3997c320, type: 3}
+      propertyPath: ShapeModule.m_Scale.z
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 769352404582875838, guid: accf4ca284393b041a4b519e3997c320, type: 3}
       propertyPath: m_Name
       value: Dust Particle System
       objectReference: {fileID: 0}
+    - target: {fileID: 2600158224784836897, guid: accf4ca284393b041a4b519e3997c320, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 10308, guid: 0000000000000000f000000000000000, type: 0}
     - target: {fileID: 3414112493619554920, guid: accf4ca284393b041a4b519e3997c320, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3414112493619554920, guid: accf4ca284393b041a4b519e3997c320, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -2.55
       objectReference: {fileID: 0}
     - target: {fileID: 3414112493619554920, guid: accf4ca284393b041a4b519e3997c320, type: 3}
       propertyPath: m_LocalPosition.z

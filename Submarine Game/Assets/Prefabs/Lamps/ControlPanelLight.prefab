@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6612740433145865293}
   m_Layer: 0
-  m_Name: Lamp
+  m_Name: ControlPanelLight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
