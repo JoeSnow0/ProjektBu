@@ -9,25 +9,25 @@ EditorBuildSettings:
     path: Assets/Scenes/Main Menu.unity
     guid: 82dd1c8921ed8694fb6935fafe65f5d7
   - enabled: 1
-    path: Assets/Scenes/Testing Scene.unity
-    guid: 9fc0d4010bbf28b4594072e72b8655ab
-  - enabled: 1
     path: Assets/Scenes/Game.unity
     guid: 6c432809b6c4c3e4a9855b7afa5e2768
   - enabled: 1
-    path: Assets/Scenes/EndScene.unity
-    guid: 76d3934dda77dd14b86a34096d63273a
-  - enabled: 1
-    path: Assets/Scenes/DeathScene.unity
-    guid: d3fad1c56acc9424eae7c421a64594e1
-  - enabled: 1
-    path: Assets/Scenes/Testing2 With Rockets.unity
-    guid: 360cf29dc90437d47a5a2f6e401b7739
-  - enabled: 1
-    path: Assets/Scenes/Testing 3YetMoreTests.unity
-    guid: cffbed09371a60243960aaa7ed3027c2
-  - enabled: 1
     path: Assets/Scenes/Credits.unity
     guid: 1e0d8e274ed1443448de72560571ff2b
+  - enabled: 1
+    path: Assets/Scenes/Ending Scenes/SaveScene.unity
+    guid: f73648993afd07d469951ff6b05c281b
+  - enabled: 1
+    path: Assets/Scenes/Ending Scenes/AbandonScene.unity
+    guid: d69b1edc58d32a741990869da5dec3dd
+  - enabled: 1
+    path: Assets/Scenes/Ending Scenes/DeathScene.unity
+    guid: 1bb1bd6be336fb24f8732f31dc57aa1f
+  - enabled: 1
+    path: Assets/Scenes/Ending Scenes/KillScene.unity
+    guid: a23c33b398a6c7b40a969cb4a17088f7
+  - enabled: 1
+    path: Assets/Scenes/Controls.unity
+    guid: 3b7c3e981be510c4489d20f81c8e9956
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: 080e9fe6a1caae5419cd271269b9112d, type: 2}

@@ -19,4 +19,8 @@ public class ButtonTemplate : MonoBehaviour
     {
         SceneManager.LoadScene(mLevelName);
     }
+    public void ExitGame()
+    {
+        Application.Quit();
+    }
 }

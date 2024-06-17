@@ -197,18 +197,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: StorageRoom 10x10m
       objectReference: {fileID: 0}
-    - target: {fileID: 2455357524605045909, guid: 7f1905a511c07f74f9e4d5c0d14f6b3d, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2455357524605045909, guid: 7f1905a511c07f74f9e4d5c0d14f6b3d, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0.32
-      objectReference: {fileID: 0}
-    - target: {fileID: 2455357524605045909, guid: 7f1905a511c07f74f9e4d5c0d14f6b3d, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -0.5
-      objectReference: {fileID: 0}
     - target: {fileID: 6494314552000654361, guid: 7f1905a511c07f74f9e4d5c0d14f6b3d, type: 3}
       propertyPath: m_LocalPosition.x
       value: 44.60427
@@ -249,7 +237,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1114622790791758390, guid: 7f1905a511c07f74f9e4d5c0d14f6b3d, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -3781,7 +3770,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1195032454458625865, guid: 54edcc2d51aa2d14f8693a69126f27af, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 13.03
+      value: 38.63
       objectReference: {fileID: 0}
     - target: {fileID: 1195032454458625865, guid: 54edcc2d51aa2d14f8693a69126f27af, type: 3}
       propertyPath: m_LocalPosition.y
@@ -3789,7 +3778,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1195032454458625865, guid: 54edcc2d51aa2d14f8693a69126f27af, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -15.12
+      value: -54.7
       objectReference: {fileID: 0}
     - target: {fileID: 1195032454458625865, guid: 54edcc2d51aa2d14f8693a69126f27af, type: 3}
       propertyPath: m_LocalRotation.w
@@ -4131,7 +4120,7 @@ MonoBehaviour:
   mAudioManager: {fileID: 0}
   mAudioSource: {fileID: 0}
   mItemName: Abandon Your Friend? (E)
-  LevelName: Main Menu
+  LevelName: AbandonScene
 --- !u!82 &1391094910
 AudioSource:
   m_ObjectHideFlags: 0
