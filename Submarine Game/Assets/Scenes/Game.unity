@@ -27,10 +27,10 @@ RenderSettings:
   m_AmbientMode: 3
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
   m_SkyboxMaterial: {fileID: 10304, guid: 0000000000000000f000000000000000, type: 0}
-  m_HaloStrength: 0.5
+  m_HaloStrength: 0.2
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
-  m_HaloTexture: {fileID: 2800000, guid: d81094cece85e1744af41293cf2adc31, type: 3}
+  m_HaloTexture: {fileID: 10300, guid: 0000000000000000f000000000000000, type: 0}
   m_SpotCookie: {fileID: 10001, guid: 0000000000000000e000000000000000, type: 0}
   m_DefaultReflectionMode: 0
   m_DefaultReflectionResolution: 128
@@ -1444,6 +1444,62 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6793932003671358192, guid: e282241d1f9e4f642a6688b7ac926026, type: 3}
       propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7517048974806974780, guid: e282241d1f9e4f642a6688b7ac926026, type: 3}
+      propertyPath: m_fontSize
+      value: 27.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 7517048974806974780, guid: e282241d1f9e4f642a6688b7ac926026, type: 3}
+      propertyPath: m_margin.w
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 7517048974806974780, guid: e282241d1f9e4f642a6688b7ac926026, type: 3}
+      propertyPath: m_margin.x
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 7517048974806974780, guid: e282241d1f9e4f642a6688b7ac926026, type: 3}
+      propertyPath: m_margin.y
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 7517048974806974780, guid: e282241d1f9e4f642a6688b7ac926026, type: 3}
+      propertyPath: m_margin.z
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 7517048974806974780, guid: e282241d1f9e4f642a6688b7ac926026, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+    - target: {fileID: 7517048974806974780, guid: e282241d1f9e4f642a6688b7ac926026, type: 3}
+      propertyPath: m_fontStyle
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7517048974806974780, guid: e282241d1f9e4f642a6688b7ac926026, type: 3}
+      propertyPath: m_fontSizeMin
+      value: 16
+      objectReference: {fileID: 0}
+    - target: {fileID: 7517048974806974780, guid: e282241d1f9e4f642a6688b7ac926026, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+    - target: {fileID: 7517048974806974780, guid: e282241d1f9e4f642a6688b7ac926026, type: 3}
+      propertyPath: checkPaddingRequired
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7517048974806974780, guid: e282241d1f9e4f642a6688b7ac926026, type: 3}
+      propertyPath: m_enableExtraPadding
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7517048974806974780, guid: e282241d1f9e4f642a6688b7ac926026, type: 3}
+      propertyPath: m_overrideHtmlColors
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7517048974806974780, guid: e282241d1f9e4f642a6688b7ac926026, type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7517048974806974780, guid: e282241d1f9e4f642a6688b7ac926026, type: 3}
+      propertyPath: m_enableVertexGradient
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7545070394161621619, guid: e282241d1f9e4f642a6688b7ac926026, type: 3}
