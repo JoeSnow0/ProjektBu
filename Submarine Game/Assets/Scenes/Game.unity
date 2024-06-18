@@ -35,10 +35,10 @@ RenderSettings:
   m_DefaultReflectionMode: 0
   m_DefaultReflectionResolution: 128
   m_ReflectionBounces: 1
-  m_ReflectionIntensity: 1
+  m_ReflectionIntensity: 0
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.37311953, g: 0.38074014, b: 0.3587274, a: 1}
+  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 0}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -3050,33 +3050,9 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1728591938}
     m_Modifications:
-    - target: {fileID: 24957953582128159, guid: 6c63a091af4b4364fa06f338ce0e4428, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 24957953582128159, guid: 6c63a091af4b4364fa06f338ce0e4428, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 304600688076246094, guid: 6c63a091af4b4364fa06f338ce0e4428, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 2172906861331546092, guid: 6c63a091af4b4364fa06f338ce0e4428, type: 3}
       propertyPath: m_Name
       value: Keypad Puzzleroom
-      objectReference: {fileID: 0}
-    - target: {fileID: 3525710021000737045, guid: 6c63a091af4b4364fa06f338ce0e4428, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3525710021000737045, guid: 6c63a091af4b4364fa06f338ce0e4428, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3525710021000737045, guid: 6c63a091af4b4364fa06f338ce0e4428, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3735220183835001927, guid: 6c63a091af4b4364fa06f338ce0e4428, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3117,34 +3093,6 @@ PrefabInstance:
     - target: {fileID: 3735220183835001927, guid: 6c63a091af4b4364fa06f338ce0e4428, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3787339285703827780, guid: 6c63a091af4b4364fa06f338ce0e4428, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7843662995865845505, guid: 6c63a091af4b4364fa06f338ce0e4428, type: 3}
-      propertyPath: CorrectCode
-      value: 3941
-      objectReference: {fileID: 0}
-    - target: {fileID: 8659799021890490869, guid: 6c63a091af4b4364fa06f338ce0e4428, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8659799021890490869, guid: 6c63a091af4b4364fa06f338ce0e4428, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -6
-      objectReference: {fileID: 0}
-    - target: {fileID: 8957460381090202020, guid: 6c63a091af4b4364fa06f338ce0e4428, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -3.83
-      objectReference: {fileID: 0}
-    - target: {fileID: 8957460381090202020, guid: 6c63a091af4b4364fa06f338ce0e4428, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8957460381090202020, guid: 6c63a091af4b4364fa06f338ce0e4428, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 1.21
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3770,7 +3718,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1195032454458625865, guid: 54edcc2d51aa2d14f8693a69126f27af, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 38.63
+      value: 12.51
       objectReference: {fileID: 0}
     - target: {fileID: 1195032454458625865, guid: 54edcc2d51aa2d14f8693a69126f27af, type: 3}
       propertyPath: m_LocalPosition.y
@@ -3778,7 +3726,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1195032454458625865, guid: 54edcc2d51aa2d14f8693a69126f27af, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -54.7
+      value: -15.3
       objectReference: {fileID: 0}
     - target: {fileID: 1195032454458625865, guid: 54edcc2d51aa2d14f8693a69126f27af, type: 3}
       propertyPath: m_LocalRotation.w

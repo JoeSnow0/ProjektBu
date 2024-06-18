@@ -51,5 +51,5 @@ MonoBehaviour:
   Voices: []
   Music: []
   SFX:
-  - {fileID: 8300000, guid: cbb94864cd50b594e8f84a7e87dbb8c5, type: 3}
-  - {fileID: 8300000, guid: 542b6be741ffdf746b2ae66eafede107, type: 3}
+  - {fileID: 0}
+  - {fileID: 0}
