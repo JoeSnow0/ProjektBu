@@ -3429,6 +3429,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Chair Template (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 7774765743866676716, guid: 9718896da06f97e41a10aa64354f3a23, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.13
+      objectReference: {fileID: 0}
+    - target: {fileID: 7774765743866676716, guid: 9718896da06f97e41a10aa64354f3a23, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.34
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
